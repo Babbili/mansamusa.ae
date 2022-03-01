@@ -1,0 +1,34 @@
+.UserAvatar {
+  display: flex;
+  width: 100%;
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+  }
+
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 18px;
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+
+    .logOut {
+      font-size: 14px;
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  }
+}

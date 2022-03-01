@@ -1,0 +1,35 @@
+.Table {
+  width: 100%;
+  table-layout: auto;
+  min-width: 100%;
+  border: 0;
+  //white-space: nowrap;
+  border-collapse: collapse;
+  background-color: transparent;
+  border-spacing: 0;
+
+  @media (min-width: 576px) {
+    margin-right: 15px;
+  }
+
+  tr {
+
+    th, td {
+      border: 1px solid rgba(0,0,0,0.12);
+      font-size: 14px;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.375rem;
+      font-weight: 500;
+      letter-spacing: .0071428571em;
+      text-decoration: inherit;
+      text-transform: inherit;
+      box-sizing: border-box;
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 15px;
+      vertical-align: top;
+    }
+  }
+}

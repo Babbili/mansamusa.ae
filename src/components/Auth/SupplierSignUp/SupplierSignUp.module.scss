@@ -1,0 +1,108 @@
+.SupplierSignUp {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 6px;
+    outline: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+      .title {
+        font-size: 18px;
+        font-weight: 800;
+        color: #444;
+      }
+
+      .subTitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 25px;
+        color: #000;
+        margin: 10px  0;
+      }
+    }
+
+    .body {
+      padding: 0 30px;
+
+      .phoneContainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+        font-family: var(--body-font);
+
+        .dropDownContainer {
+          padding: 0;
+          border: 0;
+          background: #fff;
+          box-shadow: none;
+          border-radius: 0;
+          border-bottom: 1px solid #ccc;
+
+          &.error {
+            border-bottom: 1px solid red;
+          }
+        }
+
+        .textField {
+          width: 100%;
+          height: 50px;
+          font-size: 16px;
+          padding: 6px 10px 6px 45px;
+          box-shadow: unset;
+          border-radius: 0;
+          border: 0;
+          border-bottom: 1px solid #ccc;
+          color: #656565;
+          font-weight: 500;
+        }
+      }
+
+      .agreeWrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 0 7px;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .checkBox {
+          width: 14px;
+          height: 14px;
+          border: 1px solid #777;
+          background: #f8f8f8;
+          border-radius: 1px;
+          margin-right: 15px;
+        }
+
+        .agreement {
+          color: #656565;
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+
+      .account {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        a {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

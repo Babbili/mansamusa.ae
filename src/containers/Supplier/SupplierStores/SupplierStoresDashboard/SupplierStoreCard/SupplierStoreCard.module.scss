@@ -1,0 +1,125 @@
+.SupplierStoreCard {
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+    background-color: #fff;
+    width: 100%;
+    float: left;
+    margin-bottom: 1rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.2);
+
+    &.active {
+      border: 1px solid #ffb93f;
+      box-shadow: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contain {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+
+    .itemTitle {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      color: #777;
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 23px;
+
+        .description {
+          color: #656565;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+      .total {
+        width: auto;
+        color: #ffb93f;
+        font-size: 36px;
+        font-weight: 800;
+        
+  
+        :first-child {
+          margin-bottom: 0;
+        }
+      }
+
+      
+
+      .approval {
+        display: flex;
+          flex-direction: row;
+         align-items: center;
+        color: #ffb93f;
+        font-size: 14px;
+        font-weight: 400;
+        width: 5rem;
+
+        svg {
+          animation: spin 1s ease-in-out infinite;
+          -webkit-animation: spin 1s ease-in-out infinite;
+
+          @keyframes spin {
+            to {
+              -webkit-transform: rotate(360deg);
+            }
+          }
+          @-webkit-keyframes spin {
+            to {
+              -webkit-transform: rotate(360deg);
+            }
+          }
+        }
+      }
+      
+      
+    }
+
+    
+  }
+}
+}
+.appr__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
+.done {
+  width: 10rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: .5rem;
+  
+  svg {
+    width: 1.5rem;
+    height: auto;
+  }
+
+  p {
+    color: #5cb85c;
+  }
+}

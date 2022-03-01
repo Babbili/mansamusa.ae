@@ -1,0 +1,34 @@
+.CharacteristicOptionItem {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dce0e4;
+  padding: 8px 0 5px 0;
+  cursor: pointer;
+  border-radius: 7px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+  &.active {
+    color: #ffffff;
+    background-color: #f3c965;
+
+    &:hover {
+      background-color: #f3c965;
+    }
+  }
+
+  .icon {
+    margin: 0 10px 3px 10px;
+  }
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+
+  &:last-child {
+    border-bottom: 0 solid #dce0e4;
+  }
+}

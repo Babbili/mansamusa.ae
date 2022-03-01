@@ -1,0 +1,12 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+
+  h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    padding: .4rem;
+  }
+}

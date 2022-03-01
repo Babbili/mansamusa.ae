@@ -1,0 +1,43 @@
+.Pages {
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    position: relative;
+    color: #000;
+    padding: 1rem;
+
+    span {
+      font-size: 14px;
+
+      @media (max-width: 769px) {
+        display: none;
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h5 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}

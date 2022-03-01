@@ -1,0 +1,25 @@
+{
+  "name": "Mansa Musa",
+  "short_name": "Mansa Musa",
+  "description": "UAE online shopping market-place, shop for Fashion, Beauty & Home N Art",
+  "start_url": "/",
+  "lang": "en-US",
+  "icons": [
+      {
+          "src": "android-chrome-512x512.png",
+          "size": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+      },
+      {
+          "src": "android-chrome-192x192.png",
+          "size": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+      }
+  ],
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "hsl(42, 85%, 68%)",
+  "background_color": "hsl(0, 55%, 97%)"
+}

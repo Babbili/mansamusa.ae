@@ -1,0 +1,139 @@
+.ProductDetails {
+  
+  top: 20px;
+
+  @media screen and (min-width: 900px) {
+    max-width: 500px;
+  }
+
+  .leftOvers {
+    color: #cb202d;
+    font-size: 12px;
+  }
+
+  
+.add {
+  position: fixed;
+  bottom: 3rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5.8rem;
+  background-color: var(--body-color);
+  z-index: var(--z-high);
+  padding-bottom: .5rem;
+  box-shadow: 1px 1px 2px 1px var(--container-color-light);
+
+  :first-child {
+    text-align: center;
+    justify-content: center;
+    width: calc(100% - 5rem);
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 770px) {
+    position: inherit;
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
+  h5 {
+    font-size: 14px;
+    color: #080808;
+    margin-bottom: 20px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    column-gap: .8rem;
+    padding : 2rem 1rem 1rem 1rem;
+
+    svg {
+      height: 1.3rem;
+      width: auto;
+    }
+  }
+
+  .toFavourite {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    margin: 14px 0;
+
+    @media (max-width: 769px) {
+      position: absolute;
+      top: -315px;
+      left: 18px;
+      padding: 0;
+      margin: 0;
+      width: 25px;
+
+      svg {
+        font-size: 18px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    &.active {
+      svg {
+        color: #ffc107;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      margin-right: 10px;
+      text-align: right;
+
+      @media (max-width: 769px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .description {
+    font-size: 16px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: flex-start;
+
+    .current {
+      font-size: 1.5rem;
+      color: #875c07;
+      margin-right: 15px;
+    }
+
+    .old {
+      font-size: 14px;
+      text-decoration: line-through;
+    }
+  }
+  .details {
+    padding: 0 1.5rem;
+  }
+
+  .optionsError {
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #000000;
+  }
+}

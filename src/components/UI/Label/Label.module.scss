@@ -1,0 +1,21 @@
+.Label {
+  margin-right: 10px;
+
+  .wrapper {
+    background-color: #5cb85c;
+    display: inline;
+    padding: 3px 5px 2px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+
+    @media (max-width: 769px) {
+      font-size: 12px;
+    }
+  }
+}

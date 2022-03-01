@@ -1,0 +1,66 @@
+.SupplierPlan {
+
+  .title {
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eef1f5;
+    font-size: 16px;
+    padding: 15px;
+  }
+  .sellinDubai {
+    padding: 2.2rem 1rem;
+  }
+
+  h3 {
+    color: #b08828;
+    margin: 20px 0px 30px;
+    font-size: 18px;
+  }
+
+  .subscriptionFeatures {
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      text-align: center;
+
+      .img {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      h5 {
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 25px;
+      }
+
+      .description {
+        color: #656565;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.subBtn {
+  margin: 1.2rem 0;
+  align-items: center;
+  justify-content: center;
+  :first-child {
+    margin: 0 auto;
+  }
+}
+.plan__msg {
+  font-size: var(--small-font-size);
+  padding: 0 1.2rem 1rem 1.2rem;
+}

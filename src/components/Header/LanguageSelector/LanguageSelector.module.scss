@@ -1,0 +1,57 @@
+.LanguageSelector {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  .flag {
+    width: 25px;
+    height: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    background-color: var(--primary-color-active);
+    border-radius: 3px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .3rem;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 0;
+    position: relative;
+    color: #212957;
+    height: 16px;
+
+    svg {
+      height: 1rem;
+      width: auto;
+      fill: #212957;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      transform: translate(0, -50%);
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 12px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      //padding-left: 11px;
+      border-right: 0;
+
+      &:after {
+        width: 0;
+      }
+    }
+  }
+}

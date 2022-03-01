@@ -1,0 +1,36 @@
+.BreadCrumbs {
+  padding: 10px 115px;
+  background-color: #f4f4f4;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+
+      a {
+        font-weight: 700;
+        color: #4a4a4a;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    a {
+      color: #9b9b9b;
+      font-size: 12px;
+      text-decoration: underline;
+      margin-right: 10px;
+
+      &:hover {
+        color: #9b9b9b;
+      }
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}

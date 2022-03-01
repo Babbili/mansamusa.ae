@@ -1,0 +1,34 @@
+.cardForm {
+  width: 100%;
+  color: #000;
+  height: 50px;
+  display: block;
+  font-size: 16px;
+  padding: 16px 10px;
+  box-shadow: unset;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.success {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c7430;
+    margin-right: 20px;
+    color: #ffffff;
+
+    svg {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.SliderHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 2rem 0 2rem;
+
+
+  .title {
+    font-size: var(--h3-font-size);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 4px;
+    position: relative;
+    color: #000;
+
+    @media (max-width: 769px) {
+      letter-spacing: 1px;
+    }
+  }
+}

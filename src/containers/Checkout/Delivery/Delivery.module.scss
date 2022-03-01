@@ -1,0 +1,166 @@
+.Delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1;
+
+    .cashPay {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 50px;
+
+      @media (max-width: 769px) {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+
+      .orderNumber {
+        font-size: 14px;
+        font-weight: 600;
+        width: fit-content;
+        padding: 10px 15px 8px 15px;
+        border-radius: 30px;
+        background-color: #f3c965;
+        color: #fff;
+      }
+
+      .title {
+        font-size: 43px;
+        font-weight: 700;
+        color: #000000;
+        line-height: 50px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      .subTitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .form {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+
+        .ok {
+          font-size: 43px;
+          font-weight: 600;
+          color: green;
+        }
+      }
+
+      .btnWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .phoneError {
+    margin-top: -15px;
+    padding: 5px 10px;
+    color: red;
+  }
+
+  .phoneContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-family: var(--body-font);
+
+    .dropDownContainer {
+      padding: 0;
+      border: 0;
+      background: #fff;
+      box-shadow: none;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      &.error {
+        border-bottom: 1px solid red;
+      }
+    }
+
+    .textField {
+      width: 100%;
+      color: #000;
+      height: 50px;
+      display: block;
+      font-size: 16px;
+      padding: 6px 10px;
+      box-shadow: unset;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 50px #fff;
+      }
+
+      &::placeholder {
+        color: #999;
+        font-weight: 500;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid #f3c966;
+      }
+
+      &:focus ~ .dropDownContainer {
+        outline: none;
+        border-bottom: 1px solid #f3c966;
+        border-left: 1px solid #f3c966;
+        border-top: 1px solid #f3c966;
+      }
+
+      &.error {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+
+  .radioButtonWrapper {
+    width: auto;
+    cursor: pointer;
+  }
+}

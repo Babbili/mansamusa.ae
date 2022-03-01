@@ -1,0 +1,68 @@
+.SupplierStores {
+  padding-bottom: 5rem;
+  width: 100%;
+  height: auto;
+  
+  .title {
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eef1f5;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .dashboard {
+    margin-top: 15px;
+
+    .item {
+
+      .wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        float: left;
+        margin-bottom: 30px;
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: 1px solid #ffb93f;
+        box-shadow: none;
+        justify-content: center;
+        align-items: center;
+
+        .itemTitle {
+          font-size: 16px;
+          font-weight: 600;
+          color: #777;
+          margin: 10px 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          svg {
+            margin-right: 5px;
+          }
+        }
+
+        .description {
+          color: #656565;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .total {
+          color: #ffb93f;
+          font-size: 36px;
+          font-weight: 800;
+          flex: 1;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.CheckBox {
+  display: flex;
+  flex-direction: column;
+  //padding: 0 7px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .checkBox {
+      min-width: 14px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #777;
+      background: #f8f8f8;
+      border-radius: 1px;
+    }
+
+    .label {
+      color: #656565;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  .error {
+    display: flex;
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

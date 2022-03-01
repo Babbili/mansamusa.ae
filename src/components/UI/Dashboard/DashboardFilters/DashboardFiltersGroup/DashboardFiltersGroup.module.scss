@@ -1,0 +1,31 @@
+.DashboardFiltersGroup {
+  display: flex;
+
+  @media (max-width: 576px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 0 solid #ccc;
+    transition: .3s all ease-in-out;
+
+    @media (max-width: 576px) {
+      display: flex;
+      width: 100%;
+    }
+
+    span {
+      padding: 8px 5px 5px 5px;
+    }
+  }
+}

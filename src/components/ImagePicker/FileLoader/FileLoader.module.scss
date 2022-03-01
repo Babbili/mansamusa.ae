@@ -1,0 +1,9 @@
+.FileLoader {
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

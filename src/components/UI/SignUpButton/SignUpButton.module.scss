@@ -1,0 +1,110 @@
+.SignUpButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 60px;
+  min-height: 52px;
+  color: #555555;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 13px 13px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.wide {
+    width: 100%;
+  }
+
+  &.active {
+    text-decoration: none;
+    background-color: #f3c965 !important;
+    color: #ffffff;
+    box-shadow: 0 5px 2px -1px rgba(243, 201, 101, .4) !important;
+  }
+
+  &.quantity {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: normal;
+    font-weight: 600;
+    box-shadow: none;
+    max-width: fit-content;
+    margin: 0;
+    display: inline-flex;
+    background-color: #e4e4e4;
+    transition: .3s all ease-in-out;
+  }
+
+  &.small {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    letter-spacing: normal;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: none;
+    //max-width: fit-content;
+    margin: 0;
+    display: inline-flex;
+    background-color: #e4e4e4;
+    transition: .3s all ease-in-out;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: #f3c965;
+      transition: .3s all ease-in-out;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 -5px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  &.custom {
+    background: #e4e4e4;
+    box-shadow: 0 5px 2px -1px rgba(0, 0, 0, .2);
+    transition: .3s all ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #f3c965;
+      color: #ffffff;
+      box-shadow: 0 5px 2px -1px rgba(243, 201, 101, .4);
+    }
+  }
+
+  &.google {
+    color: #666;
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    text-decoration: none;
+
+    &:hover {
+      color: #595959;
+      background-color: #f2f2f2;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.UserOTP {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 6px;
+    outline: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+      .title {
+        font-size: 18px;
+        font-weight: 800;
+        color: #444;
+      }
+
+      .subTitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 25px;
+        color: #000;
+        margin: 10px  0;
+      }
+    }
+
+    .body {
+      padding: 0 30px;
+
+      .textLine {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+          margin-left: 5px;
+        }
+      }
+
+      .forgot {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

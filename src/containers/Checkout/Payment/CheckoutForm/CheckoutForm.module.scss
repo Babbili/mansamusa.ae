@@ -1,0 +1,22 @@
+.CheckoutForm {
+
+  .cardForm {
+    width: 100%;
+    color: #000;
+    height: 50px;
+    display: block;
+    font-size: 16px;
+    padding: 16px 10px;
+    box-shadow: unset;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .cardForm:focus-within {
+    border: 2px solid #ccc;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}

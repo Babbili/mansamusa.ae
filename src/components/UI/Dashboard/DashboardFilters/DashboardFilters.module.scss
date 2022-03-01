@@ -1,0 +1,8 @@
+.DashboardFilters {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1400px) {
+    flex-wrap: wrap;
+  }
+}

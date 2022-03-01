@@ -1,0 +1,48 @@
+.inputGroup {
+  width: 100%;
+  position: relative;
+}
+.inputGroup .input {
+  background: white none;
+  color: grey;
+  font-size: 14px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+}
+.inputGroup .input:focus {
+  outline: none;
+}
+.inputGroup .input:focus ~ .inputLabel {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+.inputGroup .input:valid ~ .inputLabel {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+.inputGroup input[type=password] {
+  letter-spacing: 0.3em;
+}
+.inputGroup .inputLabel {
+  color: grey;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: 300ms ease all;
+}
+.inputGroup .inputLabel.shrink {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+
+/*# sourceMappingURL=SearchInput.module.css.map */

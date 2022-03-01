@@ -1,0 +1,8 @@
+.AdminViewProductsFilters {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 769px) {
+    flex-wrap: wrap;
+  }
+}

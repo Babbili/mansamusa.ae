@@ -1,0 +1,47 @@
+.CustomerProfile {
+  width:100%;
+
+  .title {
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eef1f5;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .phoneContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-family: var(--body-font);
+
+    .dropDownContainer {
+      padding: 0;
+      border: 0;
+      background: #fff;
+      box-shadow: none;
+      border-radius: 0;
+      border-bottom: 1px solid #ccc;
+
+      &.error {
+        border-bottom: 1px solid red;
+      }
+    }
+
+    .textField {
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+      padding: 6px 10px 6px 45px;
+      box-shadow: unset;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      color: #000000;
+      font-weight: 400;
+    }
+  }
+}

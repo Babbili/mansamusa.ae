@@ -1,0 +1,22 @@
+.Checkout {
+  padding: 0 130px !important;
+
+  @media (max-width: 769px) {
+    padding: 0 15px !important;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    position: relative;
+    color: #000;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}

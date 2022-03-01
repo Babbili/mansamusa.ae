@@ -1,0 +1,42 @@
+.Pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .next, .perv {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .page {
+      margin: 0 2px;
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f3c966;
+        border-radius: 25px;
+        color: #ffffff;
+      }
+
+      &.active {
+        background-color: #f3c966;
+        border-radius: 25px;
+        color: #ffffff;
+      }
+    }
+  }
+}

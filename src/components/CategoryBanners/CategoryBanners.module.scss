@@ -1,0 +1,41 @@
+.CategoryBanners {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding: 0 160px;
+  //margin: 70px 0 30px 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    .textWrapper {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 100px;
+      text-align: center;
+
+      h1 {
+        font-size: 33px;
+      }
+
+      p {
+        font-size: 18px;
+        //margin: 0;
+        color: #000000;
+      }
+    }
+  }
+}

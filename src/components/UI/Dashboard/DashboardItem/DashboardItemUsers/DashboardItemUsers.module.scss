@@ -1,0 +1,153 @@
+.DashboardItemUsers {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 969px) {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    cursor: pointer;
+
+    @media (max-width: 769px) {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+
+    &:hover {
+      h3 {
+        text-decoration: underline;
+      }
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: #ccc;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-size: 18px;
+    }
+
+    .titleWrapper {
+      //width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 15px;
+
+      @media (max-width: 769px) {
+        margin: 0;
+      }
+
+      h3 {
+        display: flex;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .description {
+        display: flex;
+        color: #656565;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+
+  .attentionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .attention, .ready {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: red;
+
+      svg {
+        margin: 2px 10px 4px 10px;
+      }
+    }
+
+    .ready {
+      color: darkolivegreen;
+    }
+
+    .attention {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 769px) {
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      padding: 8px 10px 5px 10px;
+      color: #656565;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid #ccc;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: .3s all ease-in-out;
+
+      @media (max-width: 769px) {
+        width: 100%;
+        margin: 0 0 10px 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &.active {
+        color: #ffffff;
+        background-color: #f3c964;
+        border: 1px solid #f3c964;
+        transition: .3s all ease-in-out;
+      }
+
+      &:hover {
+        color: #ffffff;
+        background-color: #f3c964;
+        border: 1px solid #f3c964;
+        transition: .3s all ease-in-out;
+      }
+
+      span {
+        margin: 0 5px;
+      }
+
+      svg {
+        margin: 0 5px 3px 5px;
+      }
+    }
+  }
+}

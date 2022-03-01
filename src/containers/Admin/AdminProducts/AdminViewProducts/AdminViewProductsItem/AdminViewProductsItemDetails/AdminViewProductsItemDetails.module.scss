@@ -1,0 +1,32 @@
+.AdminViewProductsItemDetails {
+
+  .prName {
+    display: flex;
+    margin-bottom: 15px;
+
+    .big {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .small {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  .prDesc {
+    display: flex;
+    flex-direction: column;
+
+    .small {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

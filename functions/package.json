@@ -1,0 +1,46 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "algoliasearch": "^4.8.4",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "convert-excel-to-json": "^1.7.0",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.3.0",
+    "firebase-functions": "^3.11.0",
+    "googleapis": "^67.0.0",
+    "helmet": "^4.4.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "read-excel-file": "^4.1.0",
+    "request": "^2.88.2",
+    "simple-excel-to-json": "^2.2.1",
+    "stripe": "^8.154.0",
+    "urlencoded-parser": "^1.0.0",
+    "xls-to-json-lc": "^0.3.4",
+    "xlsx": "^0.16.9",
+    "xlsx-to-json": "^0.3.0",
+    "xlsx-to-json-lc": "^0.5.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
