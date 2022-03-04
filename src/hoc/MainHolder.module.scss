@@ -1,0 +1,240 @@
+@mixin transition($params) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -khtml-transition: $params;
+  -o-transition: $params;
+  transition: $params;
+}
+
+@mixin scale($params) {
+  -webkit-transform: scale($params);
+  -moz-transform: scale($params);
+  -khtml-transform: scale($params);
+  -o-transform: scale($params);
+  transform: scale($params);
+}
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow:$params;
+  -moz-box-shadow:$params;
+  -khtml-box-shadow:$params;
+  -o-box-shadow:$params;
+  box-shadow:$params;
+}
+
+@mixin rotate($params) {
+  -webkit-transform: rotate($params);
+  -moz-transform: rotate($params);
+  -khtml-transform: rotate($params);
+  -o-transform: rotate($params);
+  transform: rotate($params);
+}
+
+@mixin opacity($opacity) {
+  -webkit-opacity:$opacity;
+  -moz-opacity:$opacity;
+  -khtml-opacity:$opacity;
+  -o-opacity:$opacity;
+  opacity:$opacity;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.MainHolder {
+  background: #f3c966;
+  position: relative;
+  overflow: hidden;
+  height: -webkit-fill-available;
+
+  .menuButton {
+    border-top: 2px solid #000000;
+    height: 18px;
+    width: 25px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 30;
+    left: 15px;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+    @include transition(all 0.3s ease-in);
+
+    &.rtl {
+      right: 15px;
+      left: 0;
+    }
+
+    @media (min-width: 576px) {
+      display: none;
+    }
+
+    &.active {
+      border-color: transparent;
+
+      &:before {
+        @include rotate(45deg);
+        width: 33px;
+        left: -2px;
+      }
+
+      &:after {
+        @include rotate(135deg);
+        top: 7px;
+        width: 33px;
+        left: -2px;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 25px;
+      left: 0;
+      background: #000000;
+      top: 6px;
+      @include transition(all 0.3s ease-in);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 25px;
+      left: 0;
+      background: #000000;
+      top: 14px;
+      @include transition(all 0.3s ease-in);
+    }
+  }
+
+  .nav {
+    position: absolute;
+    z-index: 10;
+    list-style-type: none;
+    padding: 85px 0 85px 20px;
+    overflow: hidden;
+    color: #000000;
+    width: 100%;
+    height: 100%;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &.rtl {
+      padding: 85px 20px 85px 0;
+      text-align: right;
+    }
+
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    &.active {
+      li {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    li {
+      //height: 30px;
+      width: 0;
+      margin: 15px 0;
+      font-size: 16px;
+      font-weight: 700;
+      white-space: nowrap;
+
+      & a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      input {
+        margin: 0 10px 2px 0;
+        display: none;
+      }
+
+      label {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #f3c966;
+          text-decoration: none;
+        }
+      }
+
+      @include transition(all 0.3s ease-in);
+      //& + li {
+      //  margin-left: -40px;
+      //  & + li {
+      //    margin-left: -80px;
+      //    & + li {
+      //      margin-left: -120px;
+      //    }
+      //  }
+      //}
+    }
+  }
+
+  .mainContent {
+    background: #ffffff;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+    visibility: visible;
+    box-shadow: 0 40px 45px -10px rgba(0, 0, 0, 0.3);
+    height: -webkit-fill-available;
+    @include transition(all 0.3s ease-in);
+
+    &.active {
+      @include scale(0.85);
+      margin-left: 260px;
+      margin-right: unset;
+      border-radius: 20px;
+      pointer-events: none;
+
+      &.rtl {
+        @include scale(0.85);
+        margin-right: 260px;
+        margin-left: unset;
+      }
+    }
+  }
+
+  .mobileFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    color: #000000;
+  }
+}

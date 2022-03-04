@@ -1,0 +1,74 @@
+.DashboardItemDetails {
+
+  .header {
+    display: flex;
+    margin-bottom: 15px;
+
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .deliveryBox {
+    //padding: 15px;
+
+    .attention {
+      width: 100%;
+      background-color: #fafafa;
+      border-radius: 10px;
+      padding: 20px 25px;
+    }
+
+    .boxWrapper {
+      width: 100%;
+      //padding: 15px;
+      background-color: #fafafa;
+      border-radius: 10px;
+    }
+
+    .dateError {
+      padding: 5px 10px;
+      margin-top: -15px;
+
+      &.red {
+        color: red;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .datePickerInput {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-family: 'Avenir LT Std', sans-serif;
+  }
+
+  .datePickerInput > div {
+    width: 100%;
+    color: #000;
+    height: 50px;
+    font-size: 16px;
+    padding: 6px 10px;
+    box-shadow: unset;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    display: flex;
+  }
+
+  .datePickerInput > div > div > input, .datePickerInput > div > div > select {
+    background: none;
+  }
+
+  .dashboard {
+    margin-top: 15px;
+  }
+}

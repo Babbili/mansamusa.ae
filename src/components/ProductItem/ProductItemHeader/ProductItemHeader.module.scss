@@ -1,0 +1,17 @@
+.ProductItemHeader {
+  display: flex;
+  flex-direction: row;
+
+  .title {
+
+    font-size: var(--normal-font-size);
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}

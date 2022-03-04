@@ -1,0 +1,49 @@
+.CategoryItem {
+  display: flex;
+  height: 55vh;
+  cursor: pointer;
+  color: #000000;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    background-color: #656565;
+
+    &:hover {
+      box-shadow: 0 0 45px -10px rgba(0, 0, 0, .3);
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      color: #ffffff;
+
+      .CategoryImage {
+        width: 100%;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+
+        .title {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 26px;
+          color: #fff;
+          text-align: center;
+          line-height: normal;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

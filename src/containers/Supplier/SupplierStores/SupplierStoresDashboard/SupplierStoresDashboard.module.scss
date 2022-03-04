@@ -1,0 +1,30 @@
+.SupplierStoresDashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  
+  .dashboard__img {
+    margin: 0 auto;
+    max-width: 300px;
+    padding-bottom: 1rem;
+  }
+
+  .banner {
+    //height: 200px;
+
+    h3 {
+      font-size: 23px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    img {
+      max-height: 200px;
+    }
+  }
+}

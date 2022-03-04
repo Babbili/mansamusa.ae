@@ -1,0 +1,25 @@
+.SliderBody {
+  position: relative;
+  padding: 0 30px;
+  overflow: hidden;
+
+  //&:before {
+  //  content: '';
+  //  width: 2px;
+  //  height: 100%;
+  //  left: 0;
+  //  top: 0;
+  //  position: absolute;
+  //  background-color: #ffffff;
+  //}
+
+  .wrapper {
+    flex-wrap: nowrap;
+    display: inline-flex;
+    width: -moz-available;          /* WebKit игнор. */
+    width: -webkit-fill-available;  /* Mozilla игнор. */
+    width: stretch;
+    padding: 45px 0;
+    transition: .3s all ease-in-out;
+  }
+}

@@ -1,0 +1,184 @@
+.AdminProductCategoryItem {
+  transition: .3s all ease-in-out;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    float: left;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.2);
+
+    .itemTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #777;
+      //margin: 0 0 10px 0;
+      //border-bottom: 1px solid #dce0e4;
+      //padding-bottom: 10px;
+      //align-items: center;
+      font-size: 16px;
+
+      .titleWrapper {
+        display: flex;
+        //justify-content: space-between;
+
+        a {
+          display: flex;
+          overflow: hidden;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:hover h3 {
+            text-decoration: underline;
+          }
+        }
+
+        .image {
+          min-width: 60px;
+          width: 60px;
+          height: 60px;
+          background-color: #ccc;
+          border-radius: 10px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .left {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0 20px;
+
+          h3 {
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 10px;
+          }
+
+          .description {
+            color: #656565;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
+          }
+        }
+
+        .right {
+
+        }
+      }
+
+      .buttonsWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .options, .categories {
+          width: 100%;
+          font-size: 14px;
+          cursor: pointer;
+          padding: 6px 12px 5px 12px;
+          border-radius: 50px;
+          border: 1px solid #ccc;
+          text-align: center;
+          transition: .3s all ease-in-out;
+
+          &:hover {
+            background-color: #f3c965;
+            color: #ffffff;
+            border: 1px solid #f3c965;
+            transition: .3s all ease-in-out;
+          }
+
+          span {
+            width: 100%;
+            padding: 6px 12px 5px 12px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            //margin: 0 10px;
+            text-align: center;
+          }
+        }
+      }
+
+      span {
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .description {
+      color: #656565;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .expand {
+        padding: 5px 5px 3px 7px;
+        border-radius: 5px;
+        background-color: #dce0e4;
+        cursor: pointer;
+
+        svg {
+          transition: .3s all ease-in-out;
+        }
+
+        &.toggled {
+          svg {
+            transform: rotate(90deg);
+            transition: .3s all ease-in-out;
+          }
+        }
+      }
+    }
+
+    .total {
+      font-size: 12px;
+      font-weight: 500;
+      max-height: 43px;
+      transition: all 0.5s ease-out;
+      overflow: hidden;
+
+      &.active {
+        max-height: 5000px;
+        transition: all 0.3s ease-in;
+      }
+
+      small {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 11px;
+        color: #777;
+      }
+    }
+
+    .addNewRegion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid #dce0e4;
+      height: 40px;
+      margin: 10px 0;
+      cursor: pointer;
+
+      svg {
+        margin: 0 10px;
+      }
+    }
+  }
+}

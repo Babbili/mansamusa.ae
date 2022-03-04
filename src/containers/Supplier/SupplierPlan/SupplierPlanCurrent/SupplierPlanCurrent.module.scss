@@ -1,0 +1,53 @@
+.SupplierPlanCurrent {
+  width: 100%;
+  height: 100%;
+  float: left;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #e4e4e4;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+
+  .name {
+    display: flex;
+    flex-direction: column;
+
+    .planName {
+      display: flex;
+      font-size: 14px;
+    }
+
+    .price {
+      display: flex;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #1c7430;
+    border-radius: 5px;
+    color: #ffffff;
+    height: 40px;
+
+    svg {
+      margin-right: 20px;
+    }
+  }
+
+  .description {
+    color: #656565;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

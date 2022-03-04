@@ -1,0 +1,27 @@
+.SliderArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 35px;
+  border: 0;
+  color: #fff;
+  padding: 0;
+  font-size: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  position: absolute;
+  border-radius: 50px;
+  background-color: #000;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}

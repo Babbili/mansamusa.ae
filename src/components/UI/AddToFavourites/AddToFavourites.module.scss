@@ -1,0 +1,19 @@
+.AddToFavourites {
+  display: flex;
+  color: #000000;
+  padding-top: 3px;
+
+  svg{
+    &.active {
+      fill: #ffc600
+    }
+  }
+  &.active {
+    color: #ffc600;
+    fill: #ffc600
+  }
+
+  @media (max-width: 769px) {
+    font-size: 18px;
+  }
+}

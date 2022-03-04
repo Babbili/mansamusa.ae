@@ -1,0 +1,128 @@
+.CustomSortBy {
+  position: relative;
+  user-select: none;
+  width: 200px;
+
+  &.open {
+
+    .select {
+
+      .trigger {
+
+        .arrow {
+
+          &::before {
+            left: -3px;
+            transform: rotate(-45deg);
+          }
+          &::after {
+            left: 3px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      .options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: #000;
+
+    .trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      height: 35px;
+      background: #ffffff;
+      cursor: pointer;
+      border-width: 1px 0 1px 0;
+      border-style: solid;
+      border-color: #000000;
+
+      .arrow {
+        position: relative;
+        height: 10px;
+        width: 10px;
+
+        &::before, &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 2px;
+          height: 100%;
+          transition: all 0.5s;
+        }
+
+        &::before {
+          left: -3px;
+          transform: rotate(45deg);
+          background-color: #000;
+        }
+
+        &::after {
+          left: 3px;
+          transform: rotate(-45deg);
+          background-color: #000;
+        }
+      }
+
+    }
+
+    .options {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid #000;
+      border-top: 0;
+      background: #fff;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+
+      .option {
+        position: relative;
+        display: block;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &.selected {
+          color: #ffffff;
+          background-color: #f3c965;
+
+          &:hover {
+            color: #ffffff;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          //background-color: #000;
+          color: #f3c965;
+        }
+      }
+    }
+  }
+}

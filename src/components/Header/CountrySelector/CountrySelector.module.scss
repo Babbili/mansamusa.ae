@@ -1,0 +1,52 @@
+.CountrySelector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding: 0 1rem;
+
+  .flag {
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 .3rem;
+  }
+
+  .item {
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    color: #212957;
+    height: 16px;
+    max-width: 3rem;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    &:after {
+      content: '';
+      position: absolute;
+      transform: translate(0, -50%);
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 12px;
+      //background-color: #000000;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      //padding-left: 11px;
+      border-right: 0;
+
+      &:after {
+        width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.AddToCart {
+  display: flex;
+  color: #000000;
+
+  @media (max-width: 769px) {
+    font-size: 18px;
+  }
+}

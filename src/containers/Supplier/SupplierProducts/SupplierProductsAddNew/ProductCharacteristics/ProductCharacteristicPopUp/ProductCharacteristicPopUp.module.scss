@@ -1,0 +1,35 @@
+.ProductCharacteristicPopUp {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, .8);
+
+  .wrapper {
+    width: 60%;
+    height: 90%;
+    background-color: #ffffff;
+    padding: 50px;
+    overflow: scroll;
+
+    @media (max-width: 769px) {
+      width: 100%;
+      height: 100%;
+      padding: 80px 15px 20px 15px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+
+    .inner {
+
+    }
+  }
+}

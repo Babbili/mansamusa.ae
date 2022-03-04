@@ -1,0 +1,77 @@
+.Task {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-left: 6px solid #ccc;
+
+  .approval {
+    display: flex;
+    align-items: center;
+    color: #ffb93f;
+    font-size: 14px;
+    font-weight: 400;
+
+    &.done {
+      color: #5cb85c;
+
+      svg {
+        animation: none;
+        -webkit-animation: none;
+      }
+    }
+
+    svg {
+      animation: spin 1s ease-in-out infinite;
+      -webkit-animation: spin 1s ease-in-out infinite;
+
+      @keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  .number, .order {
+    color: #000;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 769px) {
+    .number {
+      font-size: 14px;
+    }
+
+    .order {
+      display: none;
+    }
+  }
+
+  .amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+
+    .helpNote {
+      color: #888;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+}

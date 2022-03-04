@@ -1,0 +1,55 @@
+.TextArea {
+  display: flex;
+  margin-bottom: 15px;
+
+  .switch {
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+
+    .item {
+      padding-top: 2px;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      margin-left: 6px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .txtArea{
+    resize: none;
+    border: 1px solid #ccc;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    padding: 6px 86px 6px 10px;
+    box-shadow: unset;
+    width: 100%;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: #999;
+      font-weight: 500;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #2c82d5;
+    }
+  }
+}

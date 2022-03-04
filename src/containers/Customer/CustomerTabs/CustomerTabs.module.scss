@@ -1,0 +1,30 @@
+.CustomerTabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0 15px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: #212957;
+
+    &:hover {
+      border-color: #eee #eee #ddd;
+      color: #77798C;
+    }
+
+    &.active {
+      color: #555;
+      cursor: default;
+      border-bottom: 2px solid #f3c966;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.WishList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    position: relative;
+    color: #000;
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .wishlist__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .wishlist__product {
+    h5 {
+      padding: .5rem 1rem;
+    }
+  }
+
+}

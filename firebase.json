@@ -1,0 +1,98 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/checkout/payment",
+        "function": "app"
+      },
+      {
+        "source": "/checkout/payment/response",
+        "function": "app"
+      },
+      {
+        "source": "/supplier/plan/payment",
+        "function": "app"
+      },
+      {
+        "source": "/supplier/plan/payment/response",
+        "function": "app"
+      },
+      {
+        "source": "/subscription-status",
+        "function": "app"
+      },
+      {
+        "source": "/subscription-charges",
+        "function": "app"
+      },
+      {
+        "source": "/subscription-cancel",
+        "function": "app"
+      },
+      {
+        "source": "/delivery/set",
+        "function": "app"
+      },
+      {
+        "source": "/delivery/cancel",
+        "function": "app"
+      },
+      {
+        "source": "/payment/refund",
+        "function": "app"
+      },
+      {
+        "source": "/payment/confirm",
+        "function": "app"
+      },
+      {
+        "source": "/payment/cancel",
+        "function": "app"
+      },
+      {
+        "source": "/payment/status",
+        "function": "app"
+      },
+      {
+        "source": "/payment/charge",
+        "function": "app"
+      },
+      {
+        "source": "/payment/create",
+        "function": "app"
+      },
+      {
+        "source": "/payment/option/get",
+        "function": "app"
+      },
+      {
+        "source": "/payment/go",
+        "function": "app"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

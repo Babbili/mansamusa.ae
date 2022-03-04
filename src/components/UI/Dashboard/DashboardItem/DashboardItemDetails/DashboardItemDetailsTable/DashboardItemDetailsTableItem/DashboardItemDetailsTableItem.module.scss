@@ -1,0 +1,60 @@
+.DashboardItemDetailsTableItem {
+  border-bottom: 1px solid #d1d1d1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+
+  &:first-child {
+    .td {
+      padding: 0 5px 10px 5px;
+
+      &:first-child {
+        padding-top: 0;
+        padding-bottom: 10px;
+      }
+
+      &:last-child {
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+
+    .td {
+      padding: 10px 5px 0 5px;
+
+      &:first-child {
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+
+      &:last-child {
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  td {
+    padding: 10px;
+
+    &:first-child {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &:last-child {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

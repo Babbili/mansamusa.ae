@@ -1,0 +1,152 @@
+$sub-color: #ccc;
+$main-color: black;
+
+$color: #80868b;
+$active-color: #f3c966;
+$error-color: #f44336;
+$input-value-color: #202124;
+$border-color: 1px solid #dadce0;
+$border-color-active: 2px solid $active-color;
+$default-background: var(--body-color);
+
+@mixin shrinkLabel {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    background-color: var(--body-color);
+    padding: 0 5px;
+    color: $main-color;
+}
+
+.inputGroup {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    //margin: 45px 0;
+
+    &.error {
+
+        .inputLabel {
+
+            &.shrink {
+                color: red;
+            }
+        }
+    }
+
+    .currency {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        background-color: #ffffff;
+        padding: 0 0 0 10px;
+
+        &.disabled {
+            background-color: #fafafa;
+        }
+    }
+
+    .text {
+        padding: 5px 10px;
+
+        &.errorText {
+            color: red;
+        }
+    }
+
+    .eye {
+        position: absolute;
+        right: 10px;
+        top: 17px;
+        cursor: pointer;
+
+        svg {
+            width: 1rem;
+            height: auto;
+            fill: var(--text-color);
+        }
+    }
+
+    .input {
+        width: 100%;
+        color: #000;
+        height: 50px;
+        display: block;
+        font-size: 16px;
+        padding: 6px 14px;
+        box-shadow: unset;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: var(--body-color);
+
+        &.error {
+            border: 1px solid red;
+
+            &:focus {
+                outline: none;
+                border: 1px solid red;
+            }
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-box-shadow: inset 0 0 0 50px #fff;
+        }
+
+        &::placeholder {
+            color: #999;
+            font-weight: 500;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid #f3c966;
+        }
+
+        &:focus ~ .inputLabel {
+            @include shrinkLabel();
+            background-color: var(--body-color);
+        }
+
+        &:valid ~ .inputLabel {
+            @include shrinkLabel();
+            background-color: var(--body-color);
+        }
+
+    }
+
+    input[type='password'] {
+        letter-spacing: 0.3em;
+
+        &::placeholder {
+            letter-spacing: 0;
+        }
+    }
+
+    .inputLabel {
+        color: $sub-color;
+        
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 14px;
+        top: 15px;
+        transition: 300ms ease all;
+
+        &:focus {
+            @include shrinkLabel();
+        }
+
+        &.shrink {
+            @include shrinkLabel();
+
+        }
+    }
+}

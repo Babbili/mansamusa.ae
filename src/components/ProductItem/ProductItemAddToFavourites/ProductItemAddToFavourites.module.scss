@@ -1,0 +1,20 @@
+.ProductItemAddToFavourites {
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  position: absolute;
+  font-size: 0;
+
+  svg {
+    width: 1.6rem;
+    height: auto;
+    fill: var(--container-color-light);
+
+  &:hover {
+    fill: #ffc600;
+  }
+  &.active {
+    fill: #ffc600;
+  }
+  }
+}

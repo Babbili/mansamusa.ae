@@ -1,0 +1,35 @@
+.CatalogBreadCrumbs {
+  padding: 10px 0;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+
+      a {
+        font-weight: 700;
+        color: #4a4a4a;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    a {
+      color: #9b9b9b;
+      font-size: 14px;
+      text-decoration: underline;
+      margin-right: 10px;
+
+      &:hover {
+        color: #9b9b9b;
+      }
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.Transactions {
+
+  h5 {
+    display: flex;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 15px;
+    align-items: center;
+
+    .showMore {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #0624d2;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        color: #77798C;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.SubCategoryItem {
+  display: flex;
+  height: auto;
+  cursor: pointer;
+  color: #000000;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    background-color: #656565;
+
+    &:hover {
+      box-shadow: 0 0 45px -10px rgba(0, 0, 0, .3);
+    }
+
+    .CategoryImage {
+      width: 100%;
+      overflow: hidden;
+
+      .title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        line-height: normal;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.BreadCrumbsAdmin {
+  padding: 10px 0;
+  background-color: #f4f4f4;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+
+      span {
+        font-weight: 700;
+        color: #4a4a4a;
+        text-decoration: none;
+        cursor: auto;
+
+        &:hover {
+          color: #4a4a4a;
+        }
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    span {
+      color: #9b9b9b;
+      font-size: 12px;
+      text-decoration: underline;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: #9b9b9b;
+      }
+    }
+
+    svg {
+      fill: #9b9b9b;
+      margin-right: 10px;
+    }
+  }
+}
