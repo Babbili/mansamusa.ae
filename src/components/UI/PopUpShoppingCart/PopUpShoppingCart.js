@@ -5,7 +5,6 @@ import { toSlug } from '../../utils/toSlug'
 import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 // import { useTranslation } from 'react-i18next'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './PopUpShoppingCart.module.scss'
 
@@ -134,7 +133,6 @@ const PopUpShoppingCart = props => {
         </span>
       </li>
 
-      {/*<FontAwesomeIcon icon="key" fixedWidth />*/}
     </ul> : null
 
   )

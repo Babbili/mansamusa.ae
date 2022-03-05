@@ -27,6 +27,9 @@
         justify-content: space-between;
 
         svg {
+          width: 1rem;
+          height: 1rem;
+          fill: #777;
           cursor: pointer;
         }
       }
@@ -63,6 +66,7 @@
 
       svg {
         margin: 0 10px;
+        fill: #777;
       }
     }
   }

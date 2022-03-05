@@ -103,6 +103,10 @@
 
         svg {
           margin: 0 10px;
+          fill: #212957;
+          &:hover, &:active {
+            fill: #fff;
+          }
         }
 
         a, span {
@@ -114,6 +118,10 @@
 
           svg {
             margin: 0 10px;
+            fill: #212957;
+            &:hover, &:active {
+              fill: #fff;
+            }
           }
 
           &:hover {

@@ -66,7 +66,7 @@ const AdminName = props => {
         <ul className={`${styles.menu} ${styles.active}`}>
           <li>
             <Link to={'/admin/dashboard'}>
-              <FontAwesomeIcon icon="user" fixedWidth /> Admin Panel
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg> Admin Panel
             </Link>
           </li>
           <li
@@ -76,7 +76,7 @@ const AdminName = props => {
             }}
           >
             <span>
-              <FontAwesomeIcon icon="key" fixedWidth /> { t('logOut.label') }
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 17a5.007 5.007 0 0 0 4.898-4H14v2h2v-2h2v3h2v-3h1v-2h-9.102A5.007 5.007 0 0 0 7 7c-2.757 0-5 2.243-5 5s2.243 5 5 5zm0-8c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3z"></path></svg> { t('logOut.label') }
             </span>
           </li>
         </ul>
