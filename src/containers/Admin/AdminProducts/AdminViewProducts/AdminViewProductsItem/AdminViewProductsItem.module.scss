@@ -9,11 +9,6 @@
     display: flex;
   }
 
-  //display: flex;
-  //    font-size: 16px;
-  //    font-weight: 500;
-  //    margin-bottom: 15px;
-
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -110,6 +105,9 @@
 
           svg {
             margin: 2px 10px 4px 10px;
+            width: 1rem;
+            height: 1rem;
+            fill: hsla(7, 100%, 50%, 0.911);
           }
         }
 
@@ -171,6 +169,12 @@
 
           svg {
             margin: 0 5px 3px 5px;
+            width: 1rem;
+            height: 1rem;
+            fill: #656565;
+            &:hover {
+              fill: #fff;
+            }
           }
         }
       }

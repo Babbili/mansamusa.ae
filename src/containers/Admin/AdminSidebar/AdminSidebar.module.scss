@@ -32,7 +32,9 @@
             color: rgba(0, 0, 0, 0.6);
 
             svg {
-              color: rgba(0, 0, 0, 0.6);
+              fill: rgba(0, 0, 0, 0.6);
+              width: auto;
+              height: 1rem;
               transition: all 0.3s ease 0s;
             }
           }
@@ -44,7 +46,9 @@
             transition: all 0.3s ease 0s;
 
             svg {
-              color: rgba(0, 0, 0, 0.6);
+              fill: rgba(0, 0, 0, 0.6);
+              width: auto;
+              height: 1rem;
 
               &:nth-child(2) {
                 margin-right: 0;
@@ -54,7 +58,9 @@
           }
 
           svg {
-            color: rgba(0, 0, 0, .6);
+            fill: rgba(0, 0, 0, .6);
+            width: auto;
+            height: 1rem;
           }
         }
       }
@@ -81,6 +87,8 @@
         li {
           a {
             svg {
+              width: auto;
+              height: 1rem;
               opacity: 0;
             }
           }
@@ -100,6 +108,8 @@
 
         &.toggled {
           svg {
+            width: auto;
+            height: 1rem;
             &:nth-child(2) {
               transform: rotate(90deg);
               margin-right: 0;
@@ -115,7 +125,9 @@
           transition: all 0.3s ease 0s;
 
           svg {
-            color: #fff;
+            fill: #fff;
+            width: auto;
+            height: 1rem;
 
             &:nth-child(2) {
               margin-right: 0;
@@ -130,14 +142,15 @@
           color: #77798C;
 
           svg {
-            color: #8a6204;
+            fill: #8a6204;
             transition: all 0.3s ease 0s;
           }
         }
 
         svg {
-          color: #a7bdcd;
-          //margin-right: 20px;
+          fill: #a7bdcd;
+          width: auto;
+          height: 1rem;
           transition: all 0.3s ease 0s;
           margin-bottom: 4px;
 

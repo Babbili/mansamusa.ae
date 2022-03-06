@@ -102,6 +102,12 @@
 
         svg {
           margin: 0 10px;
+          height:1.2rem;
+          width: auto;
+          fill: #212957;
+          &:hover {
+            fill:#fff;
+          }
         }
 
         a, span {
@@ -113,6 +119,12 @@
 
           svg {
             margin: 0 10px;
+            height:1.2rem;
+            width: auto;
+            fill: #212957;
+            &:hover {
+              fill:#fff;
+            }
           }
 
           &:hover {

@@ -34,6 +34,12 @@
       color: #333;
       font-weight: 600;
       cursor: pointer;
+
+      svg {
+        height: 1rem;
+        width: auto;
+        fill: #333;
+      }
     }
   }
 
@@ -45,9 +51,15 @@
     font-size: 32px;
 
     .fb {
-      color: #4267B2;
+      svg {
+      fill: #4267B2;
       cursor: pointer;
-
+      height: 1rem;
+      width: auto;
+      &:hover {
+        fill: #77798C;
+      }
+      }
       a {
         color: #4267B2;
 
@@ -60,6 +72,15 @@
     .tw {
       color: #55acee;
       cursor: pointer;
+      svg {
+        fill: #55acee;
+        cursor: pointer;
+        height: 1rem;
+        width: auto;
+        &:hover {
+          fill: #77798C;
+        }
+      }
 
       a {
         color: #55acee;
@@ -74,6 +95,15 @@
       color: #E1306C;
       cursor: pointer;
 
+      svg {
+        fill: #E1306C;
+        cursor: pointer;
+        height: 1rem;
+        width: auto;
+        &:hover {
+          fill: #77798C;
+        }
+      }
       a {
         color: #E1306C;
 
@@ -87,6 +117,15 @@
       color: #777;
       cursor: pointer;
 
+      svg {
+        fill: #777;
+        cursor: pointer;
+        height: 1rem;
+        width: auto;
+        &:hover {
+          fill: #77798C;
+        }
+      }
       a {
         color: #777;
 
