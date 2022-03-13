@@ -98,6 +98,11 @@
           align-items: center;
           font-size: 12px;
           color: red;
+          svg {
+            width: 1rem;
+            height: auto;
+            fill: red;
+          }
 
           @media (max-width: 769px) {
             justify-content: center;
@@ -110,6 +115,11 @@
 
         .ready {
           color: darkolivegreen;
+          svg {
+            fill: darkolivegreen;
+            width: 1rem;
+            height: auto;
+          }
         }
 
         .attention {
@@ -166,6 +176,12 @@
 
           svg {
             margin: 0 5px 3px 5px;
+            fill: #656565;
+            width: 1rem;
+            height: auto;
+            &:hover {
+              fill: #fff;
+            }
           }
         }
       }

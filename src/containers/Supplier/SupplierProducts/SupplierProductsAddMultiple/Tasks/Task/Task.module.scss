@@ -15,11 +15,17 @@
     color: #ffb93f;
     font-size: 14px;
     font-weight: 400;
+    svg {
+      fill: #ffb93f;
+      width: 1rem;
+      height: auto;
+    }
 
     &.done {
       color: #5cb85c;
 
       svg {
+        fill: #5cb85c;
         animation: none;
         -webkit-animation: none;
       }
