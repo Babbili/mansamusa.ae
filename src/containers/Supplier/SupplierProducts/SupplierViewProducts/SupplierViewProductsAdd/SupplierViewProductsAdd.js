@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { scrollToTop } from '../../../../../utils/utils'
 
 import styles from './SupplierViewProductsAdd.module.scss'
-
+import { useTranslation } from 'react-i18next'
 
 const SupplierViewProductsAdd = ({ title, description, number, filter, currentFilter, handleTopFilters, ...props }) => {
+const { t } = useTranslation()
 
 
   return(
@@ -19,9 +20,9 @@ const SupplierViewProductsAdd = ({ title, description, number, filter, currentFi
     >
       <div className={`${styles.wrapper}`}>
         <div className={styles.left}>
-          <h3>Add New</h3>
+          <h3>{ t('addProduct.label') }</h3>
           <div className={styles.description}>
-            or add multiple products
+            {t('addMultipleProducts.label')}
           </div>
         </div>
         <div className={styles.right}>

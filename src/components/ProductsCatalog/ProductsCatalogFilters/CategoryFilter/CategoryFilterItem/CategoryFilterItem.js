@@ -24,7 +24,7 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
       querySnapshot.forEach(doc => {
 
         let localPath = `${category.path}/subCategories/${doc.id}`
-        let filterProps = [...category.filterProps, doc.data().title.en]
+        let filterProps = [...category.filterProps, doc.data().title[lang]]
 
         setCategories(prevState => {
           return [...prevState, {
@@ -49,8 +49,8 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
         <input
           type='checkbox'
           className={styles.checkBox}
-          id={category.title.en}
-          name={category.title.en}
+          id={category.title[lang]}
+          name={category.title[lang]}
           onChange={() => {
             setIsChecked(!isChecked)
             handleFilters(category.filterProps)
@@ -63,7 +63,7 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
             <FontAwesomeIcon icon="check" fixedWidth /> : null
         }
 
-        <label className={styles.label} htmlFor={category.title.en}>
+        <label className={styles.label} htmlFor={category.title[lang]}>
           { category.title[lang] }
         </label>
 

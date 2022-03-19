@@ -71,7 +71,7 @@ const SupplierViewProductsItem = ({ products, handleEdit, handleRemove }) => {
                 <div className={styles.titleWrapper}>
                   <h3>{ product.productName[lang] }</h3>
                   <div className={styles.description}>
-                    Status: { typeof product.status === 'object' ? product.status[lang] : product.status }
+                    {t('status.label')}: { typeof product.status === 'object' ? product.status[lang] : product.status }
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const SupplierViewProductsItem = ({ products, handleEdit, handleRemove }) => {
                   }}
                 >
                   <FontAwesomeIcon icon='edit' fixedWidth />
-                  <span>Edit</span>
+                  <span>{ t('edit.label')}</span>
                 </div>
 
                 <div
@@ -127,7 +127,7 @@ const SupplierViewProductsItem = ({ products, handleEdit, handleRemove }) => {
                   }}
                 >
                   <FontAwesomeIcon icon='trash' fixedWidth />
-                  <span>Remove</span>
+                  <span>{ t('delete.label')}</span>
                 </div>
 
               </div>

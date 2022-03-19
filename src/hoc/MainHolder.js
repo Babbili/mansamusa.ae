@@ -182,7 +182,7 @@ const MainHolder = props => {
           <Separator color={'#f3c966'} />
 
           <span>
-            { t('changeLanguage.label') }
+             { t('changeLanguage.label') }
           </span>
 
           <li>

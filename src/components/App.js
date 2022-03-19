@@ -228,6 +228,12 @@ class App extends Component {
             lang: 'ru'
           })
           document.body.style.direction = 'ltr'
+        } else if (lang === 'Turkish') {
+          localStorage.setItem('lang', JSON.stringify('tr'))
+          this.setState({
+            lang: 'tr'
+          })
+          document.body.style.direction = 'ltr'
         } else {
           localStorage.setItem('lang', JSON.stringify('ar'))
           this.setState({

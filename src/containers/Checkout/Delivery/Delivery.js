@@ -9,12 +9,14 @@ import ButtonSpinner from '../../../components/UI/ButtonSpinner/ButtonSpinner'
 
 import styles from './Delivery.module.scss'
 import { checkCustomerExistence, createCustomer } from '../utils/utils';
+import { useTranslation } from 'react-i18next'
 
 
 const Delivery = props => {
 
   const context = useContext(AppContext)
   let { lang } = context
+    let { t } = useTranslation()
 
   const [state, setState] = useState({
     firstName: '',
@@ -216,13 +218,13 @@ const Delivery = props => {
 
           <div className='col-12 mb-3 mt-4'>
             <div className={styles.title}>
-              Delivery Information
+              {t('di.label')}
             </div>
           </div>
 
           <div className='col-12 mb-3 mt-4'>
             <div className={styles.description}>
-              * Required fields<br/>
+              {t('rf.label')}<br/>
               {/*Please fill in the "Name" and "Surname" fields in Latin letters in accordance with your passport data. The rest of the fields can be filled in both Latin and Arabic.*/}
             </div>
           </div>
@@ -246,7 +248,7 @@ const Delivery = props => {
         <CheckoutSidebar>
           <SignUpButton
             type={'custom'}
-            title={!isValid ? 'Save and Continue' : <ButtonSpinner />}
+            title={!isValid ? t('sac.label') : <ButtonSpinner />}
             onClick={() => handleNext()}
             disabled={false}
             isWide={true}

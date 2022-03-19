@@ -40,6 +40,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
     productName: '',
     productNameAr: '',
     productNameRu: '',
+    productNameTr: '',
     productMpn: '',
     productHScode: '',
     productWeight: '',
@@ -55,20 +56,25 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
     productDescription: '',
     productDescriptionAr: '',
     productDescriptionRu: '',
+    productDescriptionTr: '',
     productDescriptionHtml: '',
     productDescriptionHtmlAr: '',
     productType: [
       {
         radioName: {
           en: 'Handmade',
-          ar: 'صنع يدوي'
+          ar: 'صنع يدوي',
+          ru: 'Ручная работа',
+          tr: 'El yapımı'
         },
         selected: true
       },
       {
         radioName: {
           en: 'Factory made',
-          ar: 'صنع مصنعي'
+          ar: 'صنع مصنعي',
+          ru: 'Промышленное производство',
+          tr: 'Fabrika yapımı'
         },
         selected: false
       }
@@ -80,14 +86,18 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
         id: 'active',
         title: {
           en: 'Active',
-          ar: 'نشيط'
+          ar: 'نشيط',
+          ru: 'Действующий',
+          tr: 'Aktif'
         }
       },
       {
         id: 'inactive',
         title: {
           en: 'Inactive',
-          ar: 'غير نشط'
+          ar: 'غير نشط',
+          ru: 'Недействующий',
+          tr: 'etkin değil'
         }
       }
     ],
@@ -121,9 +131,11 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
         productName: doc.data().productName.en,
         productNameAr: doc.data().productName.ar,
         productNameRu: doc.data().productName.ru,
+        productNameTr: doc.data().productName.tr,
         productDescription: doc.data().productDescription.en,
         productDescriptionAr: doc.data().productDescription.ar,
-        productDescriptionRu: doc.data().productDescription.ru
+        productDescriptionRu: doc.data().productDescription.ru,
+        productDescriptionTr: doc.data().productDescription.tr
       })
     })
   }, [id])
@@ -325,14 +337,14 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
         categoryPicker: {
           ...state.categoryPicker,
           [name]: option,
-          [`${option.en}Options`]: subCollection,
+          [`${option[lang]}Options`]: subCollection,
           categorySelectors: subCollection.length > 0 ?
-            [...state.categoryPicker.categorySelectors, option.en] :
+            [...state.categoryPicker.categorySelectors, option[lang]] :
             state.categoryPicker.categorySelectors,
           path: `${state.categoryPicker.path}/${id}/subCategories`,
           productCategories: [...productCategories, option],
           // productCategories: [...productCategories, option.en],
-          productCats: {...state.categoryPicker.productCats, ...{[option.en]: true}},
+          productCats: {...state.categoryPicker.productCats, ...{[option[lang]]: true}},
           isComplete: subCollection.length === 0
         }
       })
@@ -376,6 +388,12 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
     setState({
       ...state,
       productDescriptionRu: event.target.value
+    })
+  }
+  const handleEditorTurkish = (event) => {
+    setState({
+      ...state,
+      productDescriptionTr: event.target.value
     })
   }
 
@@ -443,6 +461,10 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
 
         let oldRef = `tmp/${file.source}`
         let newRef = `images/${currentUser.uid}/productImages/${file.source}`
+        console.log('XX File XX',updatedFiles);
+        /*if (updatedFiles.length>0) {
+           
+        }*/
         let url = await moveFirebaseFile(oldRef, newRef)
         updatedFiles = [...updatedFiles, {
           ...file,
@@ -486,7 +508,6 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
 
       // prepare images
 
-
       firestore.collection('products').doc(id)
       .update({
         ...state,
@@ -494,12 +515,14 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
         productName: {
           en: state.productName,
           ar: state.productNameAr,
-          ru: state.productNameRu
+          ru: state.productNameRu,
+          tr: state.productNameTr
         },
         productDescription: {
           en: state.productDescription,
           ar: state.productDescriptionAr,
-          ru: state.productDescriptionRu
+          ru: state.productDescriptionRu,
+          tr: state.productDescriptionTr
         },
         isApproved: false,
         productImages: updatedFiles
@@ -736,6 +759,16 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
                     lang="ru"
                   />
                 </div>
+                <div className='col-lg-6 col-12'>
+                  <Input
+                    name='productNameTr'
+                    type='text'
+                    label='product name in Turkish'
+                    value={state.productNameTr}
+                    handleChange={handleChange}
+                    lang="tr"
+                  />
+                </div>
               </div>
 
               <div className='row'>
@@ -806,7 +839,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
                <div className='col-12'>
                   <TextArea
                     name={'prodDescription'}
-                    value={state.productDescription}
+                    defaultValue={state.productDescription}
                     handleChange={handleEditorEnglish}
                     placeholder={'Add description about your product in English'}
                     rows={4}
@@ -817,7 +850,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
                 <div className='col-12'>
                   <TextArea
                     name={'prodDescriptionAr'}
-                    value={state.productDescriptionAr}
+                    defaultValue={state.productDescriptionAr}
                     handleChange={handleEditorArabic}
                     placeholder={'ضف وصف المنتج الخاص بك باللغة العربية هنا..'}
                     rows={4}
@@ -829,9 +862,19 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
                 <div className='col-12'>
                   <TextArea
                     name={'prodDescriptionRu'}
-                    value={state.productDescriptionRu}
+                    defaultValue={state.productDescriptionRu}
                     handleChange={handleEditorRussian}
-                    placeholder={'Add description about your product in Russian'}
+                    placeholder={'Add a description of your product in Russian'}
+                    rows={4}
+                    hideSwitch={true}
+                  />
+                </div>
+                <div className='col-12'>
+                  <TextArea
+                    name={'prodDescriptionTr'}
+                    defaultValue={state.productDescriptionTr}
+                    handleChange={handleEditorTurkish}
+                    placeholder={'Add a description of your product in Turkish'}
                     rows={4}
                     hideSwitch={true}
                   />

@@ -33,7 +33,9 @@ const AdminProductCategoryItem = ({ index, setBc, url, category, handleEdit, han
                 params: {
                   title: {
                     en: category.title.en,
-                    ar: category.title.ar
+                    ar: category.title.ar,
+                    ru: category.title.ru,
+                    tr: category.title.tr,
                   }
                 }
               }}

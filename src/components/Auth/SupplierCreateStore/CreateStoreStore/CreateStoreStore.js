@@ -17,6 +17,7 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
   const [currentIndex, setCurrentIndex] = useState(2)
   const [isStoreNameError, setIsStoreNameError] = useState(false)
 
+
   useEffect(() => {
     if (newStore) {
       setCurrentIndex(prevState => prevState - 1)
@@ -26,7 +27,9 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-
+      if (state)
+      console.log('STATTTTTTTT::',state);
+    
     if (
       state.storeName.length > 0 && state.companyName.length > 0 &&
       state.companyPhone.length > 0 && typeof state.product !== 'string' &&
@@ -125,7 +128,7 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
       <div className='col-12'>
         <TextArea
           name={'storeDescriptionEn'}
-          value={state.storeDescriptionEn}
+          defaultValue={state.storeDescriptionEn}
           handleChange={handleChange}
           placeholder={'Provide information about your store which will be available on store page'}
           rows={4}
@@ -136,7 +139,7 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
       <div className='col-12'>
         <TextArea
           name={'storeDescriptionAr'}
-          value={state.storeDescriptionAr}
+          defaultValue={state.storeDescriptionAr}
           handleChange={handleChange}
           placeholder={'قدم معلومات عن متجرك والتي ستكون متاحة في صفحة المتجر'}
           rows={4}
@@ -148,9 +151,19 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
       <div className='col-12'>
         <TextArea
           name={'storeDescriptionRu'}
-          value={state.storeDescriptionRu}
+          defaultValue={state.storeDescriptionRu}
           handleChange={handleChange}
           placeholder={'Предоставьте информацию о вашем магазине, которая будет доступна на странице магазина'}
+          rows={4}
+          hideSwitch={hideSwitch}
+        />
+      </div>
+      <div className='col-12'>
+        <TextArea
+          name={'storeDescriptionTr'}
+          defaultValue={state.storeDescriptionTr}
+          handleChange={handleChange}
+          placeholder={'TR Desc'}
           rows={4}
           hideSwitch={hideSwitch}
         />

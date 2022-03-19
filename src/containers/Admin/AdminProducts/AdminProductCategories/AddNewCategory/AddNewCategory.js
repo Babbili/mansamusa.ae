@@ -21,7 +21,15 @@ const AddNewCategory = ({ item, setNewItem, handleAdd, handleCheck, handleUpdate
           ...prevState,
           description: {
             en: '',
-            ar: ''
+            ar: '',
+            tr: '',
+            ru: ''
+          },
+          title: {
+            en: '',
+            ar: '',
+            tr: '',
+            ru: ''
           }
         }
       })
@@ -93,6 +101,24 @@ const AddNewCategory = ({ item, setNewItem, handleAdd, handleCheck, handleUpdate
               dir={'rtl'}
             />
           </div>
+          <div className='col-lg-6 col-12'>
+            <Input
+              name={'title.ru'}
+              type={'text'}
+              value={item.title.ru}
+              label={'Enter Name in Ru'}
+              handleChange={handleChange}
+            />
+          </div>
+          <div className='col-lg-6 col-12'>
+            <Input
+              name={'title.tr'}
+              type={'text'}
+              value={item.title.tr}
+              label={'Enter Name in Tr'}
+              handleChange={handleChange}
+            />
+          </div>
         </div>
 
         {
@@ -115,6 +141,24 @@ const AddNewCategory = ({ item, setNewItem, handleAdd, handleCheck, handleUpdate
                   label={'Enter Description in Arabic'}
                   handleChange={handleChange}
                   dir={'rtl'}
+                />
+              </div>
+              <div className='col-lg-6 col-12'>
+                <Input
+                  name={'description.ru'}
+                  type={'text'}
+                  value={item.description.ru !== undefined?item.description.ru:null}
+                  label={'Enter Description in ru'}
+                  handleChange={handleChange}
+                />
+              </div>
+              <div className='col-lg-6 col-12'>
+                <Input
+                  name={'description.tr'}
+                  type={'text'}
+                  value={item.description.tr !== undefined?item.description.tr:null}
+                  label={'Enter Description in tr'}
+                  handleChange={handleChange}
                 />
               </div>
             </div> : null
@@ -155,18 +199,24 @@ const AddNewCategory = ({ item, setNewItem, handleAdd, handleCheck, handleUpdate
         <div className='row justify-content-center mt-4'>
 
           <div className='col-lg-4 col-12'>
+          {
+            item.title.en.length > 0 && item.title.ru.length > 0 && item.title.tr.length > 0 && item.title.ar.length > 0 &&
+            item.description !== undefined && item['image'] !== undefined && item.description.en.length > 0 &&
+            item.description.ar.length > 0 && item.description.ru.length > 0 && item.description.tr.length > 0 && item['image'].length > 0 ?
             <SignUpButton
               type={'custom'}
               title={'Cancel'}
               onClick={handleCancel}
               disabled={false}
             />
-          </div>
+          : null
+        }
+        </div> 
 
           {
-            item.title.en.length > 0 && item.title.ar.length > 0 &&
-            item.description !== undefined && item.description.en.length > 0 &&
-            item.description.ar.length > 0 && item['image'].length > 0 ?
+            item.title.en.length > 0 && item.title.ru.length > 0 && item.title.tr.length > 0 && item.title.ar.length > 0 &&
+            item.description !== undefined && item['image'] !== undefined && item.description.en.length > 0 &&
+            item.description.ar.length > 0 && item.description.ru.length > 0 && item.description.tr.length > 0 && item['image'].length > 0 ?
               <div className='col-lg-4 col-12'>
                 {
                   <SignUpButton

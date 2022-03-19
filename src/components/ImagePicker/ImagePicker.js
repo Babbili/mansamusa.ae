@@ -104,7 +104,7 @@ const ImagePicker = ({ uid, state, name, setState, isMultiple }) => {
             <SignUpButton
               isSmall={true}
               title={
-                state[name].length > 0 ?
+                state[name]!==undefined && state[name].length > 0 ?
                   `${t('editFiles.label')}` : `${t('addFiles.label')}`
               }
               onClick={() => setIsFilePondOpen(!isFilePondOpen)}

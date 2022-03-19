@@ -272,7 +272,7 @@ const SupplierViewProducts = ({ currentStore, ...props }) => {
               state.products.length > 0 ?
                 <div className='col-lg-4 col-12 text-center'>
                   <SignUpButton
-                    title={'Load More'}
+                    title={ t('seeMore.label')}
                     type={'custom'}
                     onClick={handleMore}
                     disabled={false}
@@ -285,7 +285,7 @@ const SupplierViewProducts = ({ currentStore, ...props }) => {
                 </div> :
               <div className='col-lg-4 col-12 text-center mt-5'>
                 <h5>
-                  <FontAwesomeIcon icon={'smile'} /> All data loaded
+                  <FontAwesomeIcon icon={'smile'} /> {t('allLoaded.label')}
                 </h5>
               </div>
           }

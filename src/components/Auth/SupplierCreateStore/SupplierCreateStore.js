@@ -65,7 +65,8 @@ const SupplierCreateStore = props => {
         radioName: {
           en: 'Building',
           ar: 'بناء',
-          ru: 'Здание'
+          ru: 'Здание',
+          tr: 'Bina'
         },
         selected: true,
         value: 2
@@ -74,7 +75,8 @@ const SupplierCreateStore = props => {
         radioName: {
           en: 'Tower',
           ar: 'برج',
-          ru: 'башня'
+          ru: 'башня',
+          ru: 'Kule'
         },
         selected: false,
         value: 1
@@ -83,7 +85,8 @@ const SupplierCreateStore = props => {
         radioName: {
           en: 'Commercial',
           ar: 'تجاري',
-          ru: 'торговый'
+          ru: 'торговый',
+          ru: 'Reklam'
         },
         selected: false,
         value: 3
@@ -101,7 +104,8 @@ const SupplierCreateStore = props => {
     city: '',
     storeDescriptionEn: '',
     storeDescriptionAr: '',
-    storeDescriptionRu: ''
+    storeDescriptionRu: '',
+    storeDescriptionTr: ''
   })
   const [error, setError] = useState(false)
   const [stepValidation, setStepValidation] = useState([])
@@ -253,7 +257,8 @@ const SupplierCreateStore = props => {
             city: snapShot.data().address.city,
             storeDescriptionEn: snapShot.data().storeDescription.en,
             storeDescriptionAr: snapShot.data().storeDescription.ar,
-            storeDescriptionRu: snapShot.data().storeDescription.ru
+            storeDescriptionRu: snapShot.data().storeDescription.ru,
+            storeDescriptionTr: snapShot.data().storeDescription.tr
           }
         })
 
@@ -521,7 +526,8 @@ const SupplierCreateStore = props => {
             storeDescription: {
               en: state.storeDescriptionEn,
               ar: state.storeDescriptionAr,
-              ru: state.storeDescriptionRu
+              ru: state.storeDescriptionRu,
+              tr: state.storeDescriptionTr
             }
           })
           .then(() => {
@@ -630,7 +636,8 @@ const SupplierCreateStore = props => {
             storeDescription: {
               en: state.storeDescriptionEn,
               ar: state.storeDescriptionAr,
-              ru: state.storeDescriptionRu
+              ru: state.storeDescriptionRu,
+              tr: state.storeDescriptionTr
             }
           })
           .then(() => {
@@ -730,7 +737,8 @@ const SupplierCreateStore = props => {
               storeDescription: {
                 en: state.storeDescriptionEn,
                 ar: state.storeDescriptionAr,
-                ru: state.storeDescriptionRu
+                ru: state.storeDescriptionRu,
+                tr: state.storeDescriptionTr
               }
             })
             .then(() => {

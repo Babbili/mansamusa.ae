@@ -4,12 +4,14 @@ import AppContext from '../../../components/AppContext'
 import { toSlug } from '../../../components/utils/toSlug'
 
 import styles from './CheckoutSidebar.module.scss'
+import { useTranslation } from 'react-i18next'
 
 
 const CheckoutSidebar = props => {
 
   const context = useContext(AppContext)
   const { cart, lang } = context
+  let { t } = useTranslation()
 
   const [state, setState] = useState({
     total: 0,
@@ -149,7 +151,7 @@ const CheckoutSidebar = props => {
 
           <div className={styles.delivery}>
             <div className={styles.left}>
-              Delivery
+              {t('di.label')}
             </div>
             <div className={styles.right}>
               <small>AED</small> { state.delivery }
@@ -158,7 +160,7 @@ const CheckoutSidebar = props => {
 
           <div className={styles.total}>
             <div className={styles.left}>
-              Total
+              {t('total.label')}
             </div>
             <div className={styles.right}>
               { Intl.NumberFormat('en-AE', { style: 'currency', currency: 'AED' }).format(state.total) }
@@ -170,7 +172,7 @@ const CheckoutSidebar = props => {
         </div>
 
       </div>
-      <small style={{ padding: '1rem' }}>*customs & duty may apply</small>
+      <small style={{ padding: '1rem' }}>{t('feesNote.label')}</small>
 
     </div>
 

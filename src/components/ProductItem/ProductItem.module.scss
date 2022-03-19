@@ -4,12 +4,14 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease 0s;
-  min-width: 100px;
+  min-width: 263px;
   height: auto;
   cursor: pointer;
   color: #000000;
   padding: .5rem;
-    
+  @media (max-width: 769px) {
+    min-width: 100px;
+  }
 
     &:hover {
       cursor: pointer;
