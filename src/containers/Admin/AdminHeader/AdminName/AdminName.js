@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import AppContext from '../../../../components/AppContext'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { firestore, signOut } from '../../../../firebase/config'
 
 import styles from './AdminName.module.scss'

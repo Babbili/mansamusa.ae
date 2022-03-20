@@ -1163,6 +1163,8 @@ exports.updateTrialDays = functions.pubsub.schedule('0 1 * * *')
   .onSnapshot(snapshot => {
     snapshot.forEach(doc => {
 
+
+
       let a = moment()
       let b = moment.unix(doc.data().createdAt)
       let diff = a.diff(b, 'days')
@@ -3484,6 +3486,7 @@ exports.siStart = functions.pubsub.schedule('0 1 * * *')
   let now = moment()
   let startDate = moment(now).subtract(1, 'day').startOf('day').unix()
   let endDate = moment(now).subtract(1, 'day').endOf('day').unix()
+
 
   const getSub = async subscriptionId => {
 

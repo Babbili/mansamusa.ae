@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Label from '../../../components/UI/Label/Label'
 import ProductDetailsOptions from './ProductDetailsOptions/ProductDetailsOptions'
 import ProductDetailsOffers from './ProductDetailsOffers/ProductDetailsOffers'

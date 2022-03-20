@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import AppContext from '../../AppContext'
 import { useTranslation } from 'react-i18next'
 import LanguageSelectorPopUp from './LanguageSelectorPopUp/LanguageSelectorPopUp'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './LanguageSelector.module.scss'
 
 

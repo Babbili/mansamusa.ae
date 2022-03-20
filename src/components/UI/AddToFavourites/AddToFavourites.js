@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AppContext from '../../AppContext'
 
 import styles from './AddToFavourites.module.scss'

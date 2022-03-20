@@ -8,8 +8,6 @@ import {
 } from 'react-router-dom'
 import firebase, { createUserProfileDocument, firestore } from '../firebase/config'
 import AppContext from './AppContext'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import User from './User/User'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import AuthLayout from '../layouts/AuthLayout/AuthLayout'
@@ -31,65 +29,6 @@ import Cart from '../containers/Cart/Cart'
 import Checkout from '../containers/Checkout/Checkout'
 import { userStatus } from '../firebase/userStatus'
 
-import {
-  faSearch,
-  faUser,
-  faShoppingCart,
-  faHeart,
-  faArrowRight,
-  faArrowLeft,
-  faStar,
-  faChevronLeft,
-  faEye,
-  faEyeSlash,
-  faCheckCircle,
-  faKey,
-  faHome,
-  faBoxOpen,
-  faDollarSign,
-  faShoppingBag,
-  faHandshake,
-  faEnvelope,
-  faChartLine,
-  faStore,
-  faCheck,
-  faAngleRight,
-  faClone,
-  faEnvelopeSquare,
-  faPlusCircle,
-  faSpinner,
-  faSmile,
-  faTimesCircle,
-  faTrash,
-  faEdit,
-  faArrowDown,
-  faLongArrowAltRight,
-  faGlobeAfrica,
-  faUserPlus,
-  faUsers,
-  faTasks,
-  faFlag,
-  faParachuteBox,
-  faComment,
-  faBan,
-  faExclamationTriangle,
-  faImage,
-  faPlus,
-  faMinus,
-  faMapMarkerAlt,
-  faBell,
-  faBars,
-  faTimes,
-  faCogs,
-  faPencilAlt,
-  faChevronDown
-} from '@fortawesome/free-solid-svg-icons'
-
-import {
-  faFacebookSquare,
-  faTwitterSquare,
-  faInstagramSquare
-} from '@fortawesome/free-brands-svg-icons'
 import Store from '../containers/Store/Store'
 import WishList from "../containers/WishList/WishList";
 import Customer from "../containers/Customer/Customer";
@@ -97,64 +36,6 @@ import CustomerLayout from "../layouts/CustomerLayout/CustomerLayout";
 import moment from 'moment';
 import Pages from '../containers/Pages/Pages';
 import Contact from '../containers/Contact/Contact'
-
-library.add(
-  fab,
-  faSearch,
-  faUser,
-  faShoppingCart,
-  faHeart,
-  faArrowRight,
-  faArrowLeft,
-  faStar,
-  faChevronLeft,
-  faEye,
-  faEyeSlash,
-  faCheckCircle,
-  faKey,
-  faHome,
-  faBoxOpen,
-  faDollarSign,
-  faShoppingBag,
-  faHandshake,
-  faEnvelope,
-  faChartLine,
-  faStore,
-  faCheck,
-  faAngleRight,
-  faClone,
-  faEnvelopeSquare,
-  faFacebookSquare,
-  faTwitterSquare,
-  faInstagramSquare,
-  faPlusCircle,
-  faSpinner,
-  faSmile,
-  faTimesCircle,
-  faTrash,
-  faEdit,
-  faArrowDown,
-  faLongArrowAltRight,
-  faGlobeAfrica,
-  faUserPlus,
-  faUsers,
-  faTasks,
-  faFlag,
-  faParachuteBox,
-  faComment,
-  faBan,
-  faExclamationTriangle,
-  faImage,
-  faPlus,
-  faMinus,
-  faMapMarkerAlt,
-  faBell,
-  faBars,
-  faTimes,
-  faCogs,
-  faPencilAlt,
-  faChevronDown
-)
 
 
 class App extends Component {

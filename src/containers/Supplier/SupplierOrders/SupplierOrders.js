@@ -9,7 +9,6 @@ import DashboardFilters from '../../../components/UI/Dashboard/DashboardFilters/
 import DashboardItem from '../../../components/UI/Dashboard/DashboardItem/DashboardItem'
 import BasicSpinner from '../../../components/UI/BasicSpinner/BasicSpinner'
 import SignUpButton from '../../../components/UI/SignUpButton/SignUpButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DashboardSumWidget from '../../../components/UI/Dashboard/DashboardSumWidget/DashboardSumWidget'
 import { dateTime, stringFilter, topFilter } from '../../Admin/utility/utility'
 
