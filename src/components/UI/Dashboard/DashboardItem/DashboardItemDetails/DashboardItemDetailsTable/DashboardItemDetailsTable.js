@@ -8,6 +8,7 @@ import DashboardItemDetailsTableHeader from './DashboardItemDetailsTableHeader/D
 import styles from './DashboardItemDetailsTable.module.scss'
 import axios from 'axios'
 import moment from 'moment'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -500,6 +501,7 @@ const DashboardItemDetailsTable = ({ item, index, table, tables, collection, cur
                                   className={styles.btn}
                                   onClick={() => handleCancelDelivery(state.delivery.deliveryId)}
                                 >
+
                                   <FontAwesomeIcon icon='times-circle' fixedWidth />
                                   <span>
                                   {

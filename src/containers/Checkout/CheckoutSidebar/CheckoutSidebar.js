@@ -11,6 +11,7 @@ const CheckoutSidebar = props => {
 
   const context = useContext(AppContext)
   const { cart, lang } = context
+
   let { t } = useTranslation()
 
   const [state, setState] = useState({

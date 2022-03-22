@@ -7,6 +7,7 @@ import styles from './AdminSettingsSubscriptionsItem.module.scss'
 
 const AdminSettingsSubscriptionsItem = ({ item, handleEdit, handleRemove }) => {
 
+
   const context = useContext(AppContext)
   let { lang } = context
 
@@ -34,6 +35,7 @@ const AdminSettingsSubscriptionsItem = ({ item, handleEdit, handleRemove }) => {
               <FontAwesomeIcon icon={'times'} fixedWidth />
             </div>
           </div> */}
+
 
         </div>
 

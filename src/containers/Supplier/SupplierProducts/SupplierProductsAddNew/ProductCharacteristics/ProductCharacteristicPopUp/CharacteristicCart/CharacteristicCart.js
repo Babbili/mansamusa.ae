@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import AppContext from '../../../../../../../components/AppContext'
 import CharacteristicCartRow from './CharacteristicCartRow/CharacteristicCartRow'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './CharacteristicCart.module.scss'
 
 

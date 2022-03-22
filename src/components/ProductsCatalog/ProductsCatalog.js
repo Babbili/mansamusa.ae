@@ -16,6 +16,7 @@ import CustomSortBy from '../Algolia/CustomSortBy/CustomSortBy'
 import SignUpButton from '../UI/SignUpButton/SignUpButton'
 import { useTranslation } from 'react-i18next'
 
+
 import styles from './ProductsCatalog.module.scss'
 
 
@@ -106,6 +107,7 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
   const [isToggle, setIsToggle] = useState(false)
   const [subCategories, setSubCategories] = useState([])
 
+
   const setStateId = React.useRef()
 
   const nextSearchState = useCallback(async (location, searchState) => {
@@ -128,6 +130,7 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
       const pathArr = pathname.split('/').filter(f => f !== '').splice(1)
 
       const getCategory = async category => {
+
 console.log('X X Cat',category);
         let kFilter='title.en';
         if (lang=='en')
@@ -142,6 +145,7 @@ console.log('X X Cat',category);
         return await firestore.collection('productTypes')
         
         .where(kFilter, '==', category)
+
         .get()
         .then(snap => {
           let cat = {}
@@ -156,6 +160,7 @@ console.log('X X Cat',category);
       }
 
       const getSubCategory = async category => {
+
         let kFilter='title.en';
         if (lang=='en')
           kFilter='title.en';
@@ -168,6 +173,7 @@ console.log('X X Cat',category);
         
         return await firestore.collectionGroup('subCategories')
         .where(kFilter, '==', category)
+
         .get()
         .then(snap => {
           let cat = {}
@@ -212,52 +218,30 @@ console.log('X X Cat',category);
 
       let language = [lang]
       let cats = {}
-      let catsEn = {}
+
 
       language.map(l => {
 
-        //let urlEnVar = 'en'
         let allCats = categories.map(m => m[l])
-        /*let newCatData = {}
-        let newAllCats = allCats.map((m, i) => {
-          
-          m=categories[i][urlEnVar]
-          return m
-        });*/
-        /*let initialQuery = firestore.collection('productTypes')
-        let index = 0
-        
-        const response = firestore.collection('productTypes').get()
-        .then(snap => {
-          let cat = {}
-          snap.forEach(doc => {
-                    console.log('Alaa Langy 11', doc);
 
-          })
-          return cat
-        })
-*/
-        console.log('Alaa Langy',l, allCats);
+
         let c = {}
 
         allCats.map((m, i) => {
           let temp = [...allCats]
           console.log('temp', temp)
-          
+
           c = {
             [`hierarchicalCategories.${ l }.lvl0`]: temp.splice(0, i + 1).join(' > ')
           }
           return c
         })
         
-        //console.log('Alaa Langy', c);
         cats = c
 
         return null
 
       })
-
-      
 
       // `qs` does not return an array when there's a single value.
       const allBrands = Array.isArray(brands) ? brands : [brands].filter(Boolean)
@@ -283,13 +267,12 @@ console.log('X X Cat',category);
       }
     }
   
-    console.log('xxxxxx lang', lang)
     return await urlToSearchState(location, searchState)
 
   }, [lang])
 
   useEffect(() => {
-    
+
     nextSearchState(location, searchState)
     .then(r => {
       console.log('r', r)
@@ -420,21 +403,7 @@ console.log('X X Cat',category);
 
                         createURL={createURL}
                       />
-                      <ul>
-                      {
-                        categories.map((subCat, index) => (
-<a
-    className={styles.wrapper}
-    href={createURL(subCat)}
-    
-  >
 
-    {subCat}
-
-  </a>                          
-                        ))
-                      }
-                    </ul>
                     </div>
                     
                     <div className='col-12'>

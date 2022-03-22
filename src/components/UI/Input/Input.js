@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import AppContext from '../../AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './Input.module.scss'
 
 
@@ -83,6 +82,7 @@ const Input = ({ index, handleChange, label, text, type, error, value, currency,
               left: lang !== 'en' ? '10px' : 'unset'
             }}
           >
+
             <FontAwesomeIcon icon={icon} fixedWidth />
           </div> : null
       }
@@ -98,6 +98,7 @@ const Input = ({ index, handleChange, label, text, type, error, value, currency,
         //     { text }
         //   </div> : null
       }
+
 
     </div>
 

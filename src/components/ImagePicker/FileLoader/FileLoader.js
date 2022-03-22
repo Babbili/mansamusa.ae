@@ -70,7 +70,9 @@ const FileLoader = ({ uid, name, state, isMultiple, handleSave, handleCancel }) 
 
   useEffect(() => {
 
+
     return state!==undefined && state.length > 0 ?
+
       setFiles(state) :
       setFiles([])
 

@@ -100,6 +100,7 @@
 
         &.toggled {
           svg {
+
             &:nth-child(2) {
               transform: rotate(90deg);
               margin-right: 0;
@@ -116,6 +117,7 @@
 
           svg {
             color: #fff;
+
 
             &:nth-child(2) {
               margin-right: 0;

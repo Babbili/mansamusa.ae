@@ -11,7 +11,6 @@ import BasicSpinner from '../../../../components/UI/BasicSpinner/BasicSpinner'
 import AdminViewProductsComment from './AdminViewProductsComment/AdminViewProductsComment'
 import SignUpButton from '../../../../components/UI/SignUpButton/SignUpButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './AdminViewProducts.module.scss'
 
 

@@ -10,6 +10,7 @@ const ProductItemImage = ({ url, lang, product }) => {
 
   return(
 
+
     <div className={styles.ProductItemImage} 
     style={{ 
       backgroundImage: `url(${product.productImages.length > 0 ? product.productImages[0].url : noImage})` 
@@ -20,6 +21,7 @@ const ProductItemImage = ({ url, lang, product }) => {
           alt={ product.productName[lang] }
         />*/}
         &nbsp;
+
       </a>
     </div>
 

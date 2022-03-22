@@ -4,8 +4,6 @@ import AppContext from '../../../../../components/AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './AdminRegionItem.module.scss'
-
-
 const AdminRegionItem = ({ item, countryId, handleEditRegion }) => {
 
   const context = useContext(AppContext)

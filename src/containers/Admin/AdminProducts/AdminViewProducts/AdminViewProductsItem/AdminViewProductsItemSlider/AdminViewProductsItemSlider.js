@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import AppContext from '../../../../../../components/AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './AdminViewProductsItemSlider.module.scss'
 
 

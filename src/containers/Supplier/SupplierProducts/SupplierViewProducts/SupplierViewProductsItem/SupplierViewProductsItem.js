@@ -8,7 +8,6 @@ import AdminViewProductsItemOffers from './AdminViewProductsItemOffers/AdminView
 import AdminViewProductsItemErrors from './AdminViewProductsItemErrors/AdminViewProductsItemErrors'
 import AdminViewProductsItemDetails from './AdminViewProductsItemDetails/AdminViewProductsItemDetails'
 import { scrollToTop } from '../../../../../utils/utils'
-
 import styles from './SupplierViewProductsItem.module.scss'
 
 

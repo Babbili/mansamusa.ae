@@ -10,8 +10,6 @@ import { useHistory } from "react-router-dom";
 const LanguageSelector = () => {
 
   const context = useContext(AppContext)
-  
-
   const { i18n } = useTranslation()
   const [isHover, setIsHover] = useState(false)
   const [currentLanguage, setCurrentLanguage] = useState('EN')
@@ -23,10 +21,10 @@ const LanguageSelector = () => {
     setCurrentLanguage(event.target.id)
     i18n.changeLanguage(event.target.value)
     .then(r => {
+
       const newUrl = `/`;
-    // debugger;
-    console.log('useHistory...',newUrl);
     history.push(newUrl);
+
     })
   }
 
@@ -37,9 +35,11 @@ const LanguageSelector = () => {
     } else if(context.lang == 'ru') {
       setCurrentLanguage('Русский')
       i18n.changeLanguage('ru')
+
     } else if (context.lang == 'tr') {
       setCurrentLanguage('Turkish')
       i18n.changeLanguage('tr')
+
     } else {
       setCurrentLanguage('EN')
       i18n.changeLanguage('en')

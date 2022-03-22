@@ -119,6 +119,7 @@ const SupplierInvite = ({ isTrial, approved, currentStore, isSubscribed }) => {
               <div className={styles.env}>
                 <a href={`mailto:?subject=Join me on Mansa Musa&body=Join me on Mansa Musa by clicking this link — ${link}`}>
                   <FontAwesomeIcon icon="envelope" fixedWidth />
+
                 </a>
               </div>
             </div>

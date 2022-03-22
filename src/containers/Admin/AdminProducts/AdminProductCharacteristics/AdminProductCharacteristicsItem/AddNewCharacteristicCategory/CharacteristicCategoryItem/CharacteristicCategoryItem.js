@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { firestore } from '../../../../../../../firebase/config'
 import AppContext from '../../../../../../../components/AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './CharacteristicCategoryItem.module.scss'
 
 

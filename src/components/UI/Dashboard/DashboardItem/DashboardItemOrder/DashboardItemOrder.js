@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 
@@ -92,6 +93,7 @@ const DashboardItemOrder = ({ item, isToggle, handleToggle, handleApprove }) => 
                 }
               }}
             >
+
               <FontAwesomeIcon icon='times-circle' fixedWidth />
               <span>Cancel Order</span>
             </div> : null
@@ -101,6 +103,7 @@ const DashboardItemOrder = ({ item, isToggle, handleToggle, handleApprove }) => 
           className={`${styles.btn} ${isToggle ? styles.active : ''}`}
           onClick={() => handleToggle()}
         >
+
           <FontAwesomeIcon icon='eye' fixedWidth />
           <span>Details</span>
         </div>

@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 const Cart = props => {
   const { t } = useTranslation()
 
+
   const context = useContext(AppContext)
   let { lang, cart, handleIncreaseQuantity, handleDecreaseQuantity, handleRemoveItem } = context
   let path = ['Home', 'Cart']
@@ -35,6 +36,7 @@ const Cart = props => {
 
           <div className='col-12 mb-4'>
             <div className={styles.title}>
+
               {t('cart.label')} {`${cart.length > 0 ? `(${cart.length})` : ''}`}
             </div>
           </div>

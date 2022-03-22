@@ -390,6 +390,7 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
     })
   }
 
+
   const handleChangeMpn = (event) => {
     setState({
       ...state,

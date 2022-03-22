@@ -4,7 +4,6 @@ import AppContext from '../../../../components/AppContext'
 import AdminRegionItem from './AdminRegionItem/AdminRegionItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AddNewRegion from "../AddNewRegion/AddNewRegion";
-
 import styles from './AdminCountriesRegionsItem.module.scss'
 
 

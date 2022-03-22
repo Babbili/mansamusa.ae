@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import AppContext from '../../../../../../components/AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
-
 import styles from './AdminViewProductsItemOffers.module.scss'
 import PopUpImageSlider from '../../../../../../components/UI/PopUpImageSlider/PopUpImageSlider';
 

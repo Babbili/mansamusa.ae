@@ -30,7 +30,6 @@ import AdminLayout from '../layouts/AdminLayout/AdminLayout'
 import Cart from '../containers/Cart/Cart'
 import Checkout from '../containers/Checkout/Checkout'
 import { userStatus } from '../firebase/userStatus'
-
 import {
   faSearch,
   faUser,
@@ -90,6 +89,7 @@ import {
   faTwitterSquare,
   faInstagramSquare
 } from '@fortawesome/free-brands-svg-icons'
+
 import Store from '../containers/Store/Store'
 import WishList from "../containers/WishList/WishList";
 import Customer from "../containers/Customer/Customer";
@@ -97,7 +97,6 @@ import CustomerLayout from "../layouts/CustomerLayout/CustomerLayout";
 import moment from 'moment';
 import Pages from '../containers/Pages/Pages';
 import Contact from '../containers/Contact/Contact'
-
 library.add(
   fab,
   faSearch,
@@ -228,12 +227,14 @@ class App extends Component {
             lang: 'ru'
           })
           document.body.style.direction = 'ltr'
+
         } else if (lang === 'Turkish') {
           localStorage.setItem('lang', JSON.stringify('tr'))
           this.setState({
             lang: 'tr'
           })
           document.body.style.direction = 'ltr'
+
         } else {
           localStorage.setItem('lang', JSON.stringify('ar'))
           this.setState({

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 // import { Link } from 'react-router-dom'
 // import { toSlug } from '../../utils/toSlug'
 
@@ -31,7 +32,9 @@ const BreadCrumbs = ({ path }) => {
                 {/*  { item }*/}
                 {/*</Link>*/}
                 { item }
+
                 <FontAwesomeIcon icon="angle-right" fixedWidth />
+
               </div>
 
             )

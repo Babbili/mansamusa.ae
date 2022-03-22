@@ -203,6 +203,7 @@ const AddNewCategory = ({ item, setNewItem, handleAdd, handleCheck, handleUpdate
             item.title.en.length > 0 && item.title.ru.length > 0 && item.title.tr.length > 0 && item.title.ar.length > 0 &&
             item.description !== undefined && item['image'] !== undefined && item.description.en.length > 0 &&
             item.description.ar.length > 0 && item.description.ru.length > 0 && item.description.tr.length > 0 && item['image'].length > 0 ?
+
             <SignUpButton
               type={'custom'}
               title={'Cancel'}

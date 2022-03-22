@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AppContext from '../../../../../../components/AppContext'
 import moment from 'moment'
-
 import styles from './AdminViewProductsFiltersGroup.module.scss'
 
 

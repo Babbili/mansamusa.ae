@@ -21,7 +21,7 @@ const ProductItem = ({ mb, product }) => {
   return(
 
     <div className={styles.ProductItem}>
-    
+
         {/*<ProductItemRating />*/}
 
         <ProductItemAddToFavourites

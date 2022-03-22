@@ -26,6 +26,7 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
         let localPath = `${category.path}/subCategories/${doc.id}`
         let filterProps = [...category.filterProps, doc.data().title[lang]]
 
+
         setCategories(prevState => {
           return [...prevState, {
             path: localPath,
@@ -60,10 +61,12 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
 
         {
           isChecked ?
+
             <FontAwesomeIcon icon="check" fixedWidth /> : null
         }
 
         <label className={styles.label} htmlFor={category.title[lang]}>
+
           { category.title[lang] }
         </label>
 
@@ -76,6 +79,7 @@ const CategoryFilterItem = ({ category, handleFilters }) => {
                 transform: `rotate(${isToggle ? '-180deg' : '0deg'})`
               }}
             >
+
               <FontAwesomeIcon icon="arrow-down" fixedWidth />
             </div> : null
         }

@@ -26,6 +26,7 @@ const ArrowButton = ({ lang, title, icon, color, link, url, isMobile }) => {
             marginBottom: lang !== 'en' ? isMobile ? '0' : '4px' : '4px'
           }}
         >
+
           <FontAwesomeIcon icon={icon} fixedWidth />
         </span>
       </Link>

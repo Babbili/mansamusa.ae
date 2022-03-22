@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next'
 const CartSidebar = props => {
   const { t } = useTranslation()
 
+
   const context = useContext(AppContext)
   const { currentUser, cart } = context
 

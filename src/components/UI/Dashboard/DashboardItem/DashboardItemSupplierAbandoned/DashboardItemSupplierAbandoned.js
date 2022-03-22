@@ -1,7 +1,6 @@
 import React from 'react'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './DashboardItemSupplierAbandoned.module.scss'
 
 
@@ -26,6 +25,7 @@ const DashboardItemSupplierAbandoned = ({ item, isToggle, handleToggle }) => {
       </div>
 
       <div className={styles.btnWrapper}>
+
 
         {/*<div*/}
         {/*  className={styles.btn}*/}

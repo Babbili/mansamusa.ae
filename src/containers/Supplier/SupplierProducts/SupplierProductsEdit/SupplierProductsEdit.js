@@ -390,6 +390,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
       productDescriptionRu: event.target.value
     })
   }
+
   const handleEditorTurkish = (event) => {
     setState({
       ...state,
@@ -461,6 +462,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
 
         let oldRef = `tmp/${file.source}`
         let newRef = `images/${currentUser.uid}/productImages/${file.source}`
+
         console.log('XX File XX',updatedFiles);
         /*if (updatedFiles.length>0) {
            

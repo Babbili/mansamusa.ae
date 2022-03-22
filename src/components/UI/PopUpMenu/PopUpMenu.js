@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './PopUpMenu.module.scss'
 
 
@@ -18,6 +17,7 @@ const PopUpMenu = ({ type, profile, signOut, currentUser }) => {
         <ul className={`${styles.PopUpMenu}`}>
           <li>
             <Link to={profile}>
+
               <FontAwesomeIcon icon="user" fixedWidth />Admin Panel
             </Link>
           </li>

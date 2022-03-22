@@ -259,11 +259,13 @@ const Category = props => {
  console.log('rootPath', rootPath)
  console.log('rootCategory', rootCategory)
   return(
+
     /*styles.category+*/
     <div className={`bd__container`}>
 
       {
         rootPath!==undefined && rootPath.length > 0 ?
+
           <ProductsCatalog
             isMobile={isMobile}
             category={category}

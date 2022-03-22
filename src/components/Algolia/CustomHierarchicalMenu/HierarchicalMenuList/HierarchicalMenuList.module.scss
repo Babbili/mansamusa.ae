@@ -35,7 +35,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        color: #000000;
+        fill: #000000;
+
       }
     }
 
@@ -44,7 +45,8 @@
       left: 4px;
       top: 5px;
       font-size: 10px;
-      color: #ffc600;
+      fill: #ffc600;
+
       pointer-events: none;
     }
 
@@ -73,6 +75,7 @@
 
       }
 
+
     }
 
     .label {
@@ -83,10 +86,6 @@
       align-items: center;
       display: flex;
       margin: 0 10px;
-
-      .left {
-
-      }
 
       .right {
         width: 30px;

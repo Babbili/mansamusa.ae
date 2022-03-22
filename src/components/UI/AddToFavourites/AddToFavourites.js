@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import AppContext from '../../AppContext'
 
 import styles from './AddToFavourites.module.scss'
@@ -23,6 +24,7 @@ const AddToFavourites = ({ product }) => {
   return(
 
     <div className={`${styles.AddToFavourites} ${isAdded ? styles.active : ''}`}>
+
       <FontAwesomeIcon icon="heart" fixedWidth onClick={() => handleAddWishlistItem(product)} />
     </div>
 

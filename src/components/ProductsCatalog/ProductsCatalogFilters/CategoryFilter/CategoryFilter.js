@@ -11,6 +11,7 @@ const CategoryFilter = ({ category, handleFilters }) => {
 
   const context = useContext(AppContext)
   let { lang } = context
+
   let { pathname } = useLocation()
 
   const [categories, setCategories] = useState([])
@@ -36,6 +37,7 @@ const CategoryFilter = ({ category, handleFilters }) => {
 
       firestore.collection(`${localPath}/subCategories`)
       .where(kFilter, '==', currentCategory)
+
       .get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
 

@@ -41,6 +41,7 @@ const LanguageSelectorPopUp = ({ isHover, changeLanguage }) => {
           Turkish
         </label>
       </li>}
+
       <li>
         <input id='العربيّة' type="radio" value="ar" name="language" defaultChecked={lang === 'ar'} />
         <label htmlFor='العربيّة'>

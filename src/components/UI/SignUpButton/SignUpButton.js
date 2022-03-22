@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import AppContext from '../../AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './SignUpButton.module.scss'
 import ButtonSpinner from '../ButtonSpinner/ButtonSpinner'
 

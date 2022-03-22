@@ -14,9 +14,11 @@ const AddToCart = ({ product }) => {
   // quantity: 1 / quantity: 1
   // store: "pinchme" / store: "pinchme"
 
+
   return(
 
     <div className={styles.AddToCart}>
+
       <FontAwesomeIcon icon="shopping-cart" fixedWidth />
     </div>
 

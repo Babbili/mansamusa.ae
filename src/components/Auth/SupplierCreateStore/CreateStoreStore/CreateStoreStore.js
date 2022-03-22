@@ -16,8 +16,6 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
   let { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(2)
   const [isStoreNameError, setIsStoreNameError] = useState(false)
-
-
   useEffect(() => {
     if (newStore) {
       setCurrentIndex(prevState => prevState - 1)
@@ -27,9 +25,6 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-      if (state)
-      console.log('STATTTTTTTT::',state);
-    
     if (
       state.storeName.length > 0 && state.companyName.length > 0 &&
       state.companyPhone.length > 0 && typeof state.product !== 'string' &&
@@ -152,12 +147,14 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
         <TextArea
           name={'storeDescriptionRu'}
           defaultValue={state.storeDescriptionRu}
+
           handleChange={handleChange}
           placeholder={'Предоставьте информацию о вашем магазине, которая будет доступна на странице магазина'}
           rows={4}
           hideSwitch={hideSwitch}
         />
       </div>
+
       <div className='col-12'>
         <TextArea
           name={'storeDescriptionTr'}
@@ -168,6 +165,7 @@ const CreateStoreStore = ({ uid, error, params, index, state, newStore, editStor
           hideSwitch={hideSwitch}
         />
       </div>
+
 
       {
         newStore ? null :

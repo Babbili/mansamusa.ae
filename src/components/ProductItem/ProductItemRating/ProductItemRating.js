@@ -10,6 +10,7 @@ const ProductItemRating = props => {
 
     <div className={styles.ProductItemRating}>
       <FontAwesomeIcon icon="star" fixedWidth /> 4.3
+
     </div>
 
   )
