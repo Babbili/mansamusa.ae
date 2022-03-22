@@ -294,7 +294,7 @@ const Header = props => {
               }}
             >
               <h5 >
-                <Link to={`/categories${toSlug(subCategory.title.en)}`} onClick={()=> toggleMenu()} >
+                <Link to={`/categories${toSlug(subCategory.title[lang])}/`} onClick={()=> toggleMenu()} >
                   { subCategory.title[lang] }
                 </Link>
               </h5>
@@ -302,7 +302,7 @@ const Header = props => {
                 {
                   subCategory.subCategories.map((subCat, index) => (
                     <li key={index} >
-                      <Link to={`/categories${toSlug(subCategory.title.en)}${toSlug(subCat.title.en)}`} onClick={()=> toggleMenu()} >
+                      <Link to={`/categories${toSlug(subCategory.title[lang])}${toSlug(subCat.title[lang])}`} onClick={()=> toggleMenu()} >
                         { subCat.title[lang] }
                       </Link>
                     </li>

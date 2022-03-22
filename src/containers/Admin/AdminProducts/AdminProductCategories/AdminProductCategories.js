@@ -106,8 +106,8 @@ const AdminProductCategories = props => {
 
   const handleNew = () => {
     setNewCategory({
-      title: {en: '', ar: ''},
-      description: {en: '', ar: ''},
+      title: {en: '', ar: '',ru: '', tr: ''},
+      description: {en: '', ar: '',ru: '', tr: ''},
       image: [],
       imgUrl: '',
       isHidden: false,

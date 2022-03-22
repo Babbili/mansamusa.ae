@@ -34,12 +34,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
-      svg {
-        height: 1rem;
-        width: auto;
-        fill: var(--text-color);
-      }
+      font-size: 18px;
     }
 
     .titleWrapper {
@@ -120,16 +115,6 @@
       margin-left: 15px;
       cursor: pointer;
       transition: .3s all ease-in-out;
-
-      svg {
-        fill: #656565;
-        height: 1rem;
-        width: auto;
-        &.active, &:hover {
-          fill: #ffffff;
-          background-color: #f3c964;
-        }
-      }
 
       @media (max-width: 576px) {
         width: 100%;

@@ -9,7 +9,6 @@ firebase-debug.*.log*
 
 # Firebase cache
 .firebase/
-src/firebase/mansamusa-4f8be-firebase-adminsdk-icbsc-b07f04b7c4.json
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.

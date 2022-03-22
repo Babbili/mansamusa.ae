@@ -1,6 +1,27 @@
 .ProductItemImage {
   cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  border-radius:12px;
+  height: 300px;
+  width: auto;
+  @media (max-width: 769px) {
+      height: 242px;
+      width: auto;
+    }
   img {
     border-radius: .5rem;
   }
+  a {
+  	padding: 68% 48%;
+    position: relative;
+    top: 168px;
+    left: 0;
+    @media (max-width: 769px) {
+		padding: 84% 48%;
+    	top: 147px;
+    }
+  }
+
 }

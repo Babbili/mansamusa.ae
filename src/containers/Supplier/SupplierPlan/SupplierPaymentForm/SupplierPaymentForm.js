@@ -11,6 +11,7 @@ import SignUpButton from '../../../../components/UI/SignUpButton/SignUpButton'
 import ps from '../../../../assets/powered-by-stripe.png'
 import styles from './SupplierPaymentForm.module.scss'
 import { firestore } from '../../../../firebase/config'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const SupplierPaymentForm = ({ selected, isLoading, currentUser, currentStore, handleCancel, subscriptionData }) => {
@@ -107,7 +108,7 @@ const SupplierPaymentForm = ({ selected, isLoading, currentUser, currentStore, h
           <div className='col-md-6 col-12 my-5'>
             <div className={styles.success}>
               <div className={styles.icon}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
+                <FontAwesomeIcon icon={'check'} fixedWidth />
               </div>
               Payment Successful!
             </div>

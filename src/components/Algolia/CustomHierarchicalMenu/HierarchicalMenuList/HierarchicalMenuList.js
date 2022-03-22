@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './HierarchicalMenuList.module.scss'
 
 
@@ -53,7 +54,7 @@ const HierarchicalMenuList = ({ items, refine, createURL }) => {
                 transform: `rotate(${item.isRefined ? '-180deg' : '0deg'})`
               }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+              <FontAwesomeIcon icon="arrow-down" fixedWidth />
             </div>
 
           </a>

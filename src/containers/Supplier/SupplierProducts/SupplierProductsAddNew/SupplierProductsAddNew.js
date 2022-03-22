@@ -37,6 +37,7 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
     productName: '',
     productNameAr: '',
     productNameRu: '',
+    productNameTr: '',
     productPrice: '',
     productMpn: '',
     productHScode: '',
@@ -53,12 +54,14 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
     productDescription: '',
     productDescriptionAr: '',
     productDescriptionRu: '',
+    productDescriptionTr: '',
     productType: [
       {
         radioName: {
           en: 'Handmade',
           ar: 'صنع يدوي',
-          ru: 'Ручная работа'
+          ru: 'Ручная работа',
+          tr: 'El yapımı'
         },
         selected: true
       },
@@ -66,7 +69,8 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
         radioName: {
           en: 'Factory made',
           ar: 'صنع مصنعي',
-          ru: 'Промышленное производство'
+          ru: 'Промышленное производство',
+          tr: 'Fabrika yapımı'
         },
         selected: false
       }
@@ -79,7 +83,8 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
         title: {
           en: 'Active',
           ar: 'نشيط',
-          ru: 'Действующий'
+          ru: 'Действующий',
+          tr: 'Aktif'
         }
       },
       {
@@ -87,7 +92,8 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
         title: {
           en: 'Inactive',
           ar: 'غير نشط',
-          ru: 'Недействующий'
+          ru: 'Недействующий',
+          tr: 'etkin değil'
         }
       }
     ],
@@ -377,6 +383,14 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
     })
   }
 
+  const handleEditorTurkish = (event) => {
+    setState({
+      ...state,
+      productDescriptionTr: event.target.value
+    })
+  }
+
+
   const handleChangeMpn = (event) => {
     setState({
       ...state,
@@ -529,12 +543,14 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
         productName: {
           en: state.productName,
           ar: state.productNameAr,
-          ru: state.productNameRu
+          ru: state.productNameRu,
+          tr: state.productNameTr
         },
         productDescription: {
           en: state.productDescription,
           ar: state.productDescriptionAr,
-          ru: state.productDescriptionRu
+          ru: state.productDescriptionRu,
+          tr: state.productDescriptionTr
         },
         productMpn: state.productMpn,
         productHScode: state.productHScode,
@@ -729,7 +745,7 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
                     <Input
                       name='productName'
                       type='text'
-                      label={ t('productName.label') }
+                      label={t('productNameEn.label')}
                       value={state.productName}
                       handleChange={handleChange}
                       error={isError && state.productName.length === 0 && link === '#productName'}
@@ -740,7 +756,7 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
                     <Input
                       name='productNameAr'
                       type='text'
-                      label='اسم المنتج بالعربية'
+                      label={t('productNameAr.label')}
                       value={state.productNameAr}
                       handleChange={handleChange}
                       dir="rtl"
@@ -751,10 +767,20 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
                     <Input
                       name='productNameRu'
                       type='text'
-                      label='Название товара'
+                      label={t('productNameRu.label')}
                       value={state.productNameRu}
                       handleChange={handleChange}
                       lang="ru"
+                    />
+                  </div>
+                  <div className='col-lg-6 col-12'>
+                    <Input
+                      name='productNameTr'
+                      type='text'
+                      label={t('productNameTr.label')}
+                      value={state.productNameTr}
+                      handleChange={handleChange}
+                      lang="tr"
                     />
                   </div>
                 </div>
@@ -912,7 +938,16 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
                     hideSwitch={true}
                   />
                 </div>
-
+                <div className='col-12'>
+                  <TextArea
+                    name={'prodDescriptionTr'}
+                    value={state.productDescriptionTr}
+                    handleChange={handleEditorTurkish}
+                    placeholder={'Ürününüz hakkında Türkçe açıklama ekleyin'}
+                    rows={4}
+                    hideSwitch={true}
+                  />
+                </div>
 
                 <div className='row'>
                   <div className='col-12'>

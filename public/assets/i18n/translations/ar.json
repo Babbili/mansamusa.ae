@@ -12,7 +12,9 @@
   "signUpVirtualShop.label": "الاشتراك في المتجر الافتراضي",
   "account.label": "الحساب",
   "cart.label": "عربة التسوق",
+  "cartCouponDesc.label": "* يمكن تطبيق الخصم على كل أو بعض العناصر. جميع الخصومات المقدمة من موردي المنتجات. إذا كنت بحاجة إلى مساعدة ، فاتصل بالمورد",
   "wishlist.label": "قائمة الرغبات",
+  "feesNote.label": "* قد يتم تطبيق الرسوم الجمركية والرسوم",
   "all.label": "الكل",
   "searchForProductsAndBrands.label": "ابحث عن المنتجات والعلامات التجارية",
   "chooseLanguage.label": "اختار لغة",
@@ -68,6 +70,21 @@
   "passwordsDoNotMuch.label": "كلمات المرور لا تفعل الكثير.",
   "approved.label": "تمت الموافقة",
   "totalNumberOfProducts.label": "العدد الإجمالي للمنتجات",
+  "totalItems.label": "Total Items",
+  "total.label": "Total",
+  "checkout.label": "Checkout",
+
+  "di.label": "معلومات التوصيل",
+  "rf.label": "الحقول المطلوبة",
+  "fName.label": "الاسم الأول",
+  "lName.label": "الاسم الاخير",
+  "ourlist.label": "تريد الوصول المبكر للبيع؟ احصل على قائمتنا",
+  "state.label": "حالة",
+  "zipcode.label": "الرمز البريدي",
+  "delivery.label": "توصيل",
+  "badd.label": "استخدم كعنوان لإرسال الفواتير",
+  "sac.label": "حفظ ومتابعة",
+  
   "inApproval.label": "جاري تحت الموافقة",
   "edit.label": "تعديل",
   "setAsDefault.label": "تعيين كافتراضي",
@@ -119,6 +136,7 @@
   "theBestPractice.label": "أفضل ممارسة هي إضافة معلومات منتظمة إلى الملف مثل سعر المنتج أو الاسم. من السهل إضافة تفاصيل أخرى مثل خيارات المنتج أو الصور أو الفئات من لوحة الإدارة.",
   "addMultipleProductsTasks.label": "إضافة مهام منتجات متعددة",
   "seeMore.label": "شاهد المزيد",
+  "allLoaded.label": "تم تحميل جميع البيانات",
   "downloadItHere.label": "قم بتنزيله من هنا (ملف .xlsx)",
   "processing.label": "معالجة",
   "processed.label": "معالجتها",
@@ -326,5 +344,7 @@
   "followMansaMusa.label": "تابع منسى موسى",
   "tnsTraders.label": "الشروط والأحكام للمتداولين",
   "privacyPolicy.label": "سياسة الخصوصية وملفات تعريف الارتباط",
-  "termsNconditions.label": "البنود و الظروف"
+  "termsNconditions.label": "البنود و الظروف",
+  "brands.label": "العلامات التجارية",
+  "discounts.label": "الخصومات"
 }

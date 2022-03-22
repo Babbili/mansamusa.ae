@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 import AppContext from '../../AppContext'
 import { useTranslation } from 'react-i18next'
 import LanguageSelectorPopUp from './LanguageSelectorPopUp/LanguageSelectorPopUp'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './LanguageSelector.module.scss'
+import { useHistory } from "react-router-dom";
 
 
 const LanguageSelector = () => {
@@ -11,6 +13,7 @@ const LanguageSelector = () => {
   const { i18n } = useTranslation()
   const [isHover, setIsHover] = useState(false)
   const [currentLanguage, setCurrentLanguage] = useState('EN')
+  const history = useHistory();
 
   const changeLanguage = (event) => {
     setIsHover(false)
@@ -18,6 +21,10 @@ const LanguageSelector = () => {
     setCurrentLanguage(event.target.id)
     i18n.changeLanguage(event.target.value)
     .then(r => {
+
+      const newUrl = `/`;
+    history.push(newUrl);
+
     })
   }
 
@@ -28,6 +35,11 @@ const LanguageSelector = () => {
     } else if(context.lang == 'ru') {
       setCurrentLanguage('Русский')
       i18n.changeLanguage('ru')
+
+    } else if (context.lang == 'tr') {
+      setCurrentLanguage('Turkish')
+      i18n.changeLanguage('tr')
+
     } else {
       setCurrentLanguage('EN')
       i18n.changeLanguage('en')

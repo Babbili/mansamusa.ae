@@ -26,8 +26,19 @@ const Category = props => {
   
   const getCategory = async category => {
     const { en } = lang
+
+    let kFilter='title.en';
+    if (en=='en')
+      kFilter='title.en';
+    else if (en=='ar')
+      kFilter='title.ar';
+    else if (en=='tr')
+      kFilter='title.tr';
+    else if (en=='ru')
+      kFilter='title.ru';
+
     return await firestore.collection('productTypes')
-    .where('title.en', '==', category)
+    .where(kFilter, '==', category)
     .get()
     .then(snap => {
       let cat = {}
@@ -44,8 +55,18 @@ const Category = props => {
 
   const getSubCategory = async category => {
     const { en } = lang
+    let kFilter='title.en';
+    if (en=='en')
+      kFilter='title.en';
+    else if (en=='ar')
+      kFilter='title.ar';
+    else if (en=='tr')
+      kFilter='title.tr';
+    else if (en=='ru')
+      kFilter='title.ru';
+
     return await firestore.collectionGroup('subCategories')
-    .where('title.en', '==', category)
+    .where(kFilter, '==', category)
     .get()
     .then(snap => {
       let cat = {}
@@ -95,7 +116,7 @@ const Category = props => {
 
   useEffect(() => {
 
-    if (pathname.split('/').length === 3) {
+    if (pathname.split('/')!==undefined && pathname.split('/').length === 3) {
 
       // initial
       getRootInitialPath(titleCase(category))
@@ -131,17 +152,27 @@ const Category = props => {
 
       let currentCategory = categories[index] !== undefined ? titleCase(categories[index]) : ''
       let localPath = path
-      let localIndex = index === categories.length - 1 ? categories.length - 1 : index
+      let localIndex = index === categories!==undefined && categories.length - 1 ? categories.length - 1 : index
+      
+      let kFilter='title.en';
+      if (lang=='en')
+        kFilter='title.en';
+      else if (lang=='ar')
+        kFilter='title.ar';
+      else if (lang=='tr')
+        kFilter='title.tr';
+      else if (lang=='ru')
+        kFilter='title.ru';
 
       firestore.collection(`${localPath}/subCategories`)
-      .where('title.en', '==', currentCategory)
+      .where(kFilter, '==', currentCategory)
       .get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
 
           localPath = localPath + `/subCategories/${doc.id}`
           localIndex = localIndex + 1
 
-          if (index === categories.length - 1) {
+          if (categories!==undefined && index === categories.length - 1) {
 
             doc.ref.collection('promos')
             .get().then(querySnapshot => {
@@ -158,7 +189,7 @@ const Category = props => {
       })
       .then(() => {
 
-        if (index <= categories.length - 1) {
+        if (categories!==undefined && index <= categories.length - 1) {
           getProms(localPath, categories, localIndex)
         }
 
@@ -173,7 +204,7 @@ const Category = props => {
   useEffect(() => {
     setPromos([])
     let arr = pathname.split('/').filter(f => f !== '')
-    if (arr.length === 2) {
+    if (arr!==undefined && arr.length === 2) {
       setIsInitial(true)
       // setCategories(arr.splice(2))
     } else {
@@ -182,11 +213,20 @@ const Category = props => {
   }, [pathname])
 
   useEffect(() => {
+    let kFilter='title.en';
+    if (lang=='en')
+      kFilter='title.en';
+    else if (lang=='ar')
+      kFilter='title.ar';
+    else if (lang=='tr')
+      kFilter='title.tr';
+    else if (lang=='ru')
+      kFilter='title.ru';
 
     let initialCategory = firestore.collection('productTypes')
-    .where('title.en', '==', titleCase(category))
+    .where(kFilter, '==', titleCase(category))
 
-    if (categories.length > 0) {
+    if (categories!==undefined && categories.length > 0) {
       initialCategory.get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
@@ -220,10 +260,12 @@ const Category = props => {
  console.log('rootCategory', rootCategory)
   return(
 
-    <div className={styles.category+` bd__container`}>
+    /*styles.category+*/
+    <div className={`bd__container`}>
 
       {
-        rootPath.length > 0 ?
+        rootPath!==undefined && rootPath.length > 0 ?
+
           <ProductsCatalog
             isMobile={isMobile}
             category={category}

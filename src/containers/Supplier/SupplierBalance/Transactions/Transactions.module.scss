@@ -14,17 +14,9 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      svg {
-        fill: #0624d2;
-        height: 1rem;
-        width: auto;
-      }
 
       &:hover {
         color: #77798C;
-        svg {
-          fill: #77798C;
-        }
       }
     }
   }

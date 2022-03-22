@@ -13,12 +13,15 @@ const ProductItemImage = ({ url, lang, product, isMobile }) => {
 
     <div
       className={styles.ProductItemImage}
+      style={{ 
+      backgroundImage: `url(${product.productImages.length > 0 ? product.productImages[0].url : noImage})` 
+    }}
     >
       <Link to={url}>
-        <img
+        {/*<img
           src={product.productImages.length > 0 ? product.productImages[0].url : noImage}
           alt={ product.productName[lang] }
-        />
+        />*/}
       </Link>
     </div>
 

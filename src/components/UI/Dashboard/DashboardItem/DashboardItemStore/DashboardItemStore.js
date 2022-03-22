@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import moment from 'moment'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import styles from './DashboardItemStore.module.scss'
 import AppContext from '../../../../AppContext'
@@ -28,7 +29,7 @@ const DashboardItemStore = ({ item, isToggle, handleToggle, handleApprove, handl
               }}
             /> :
             <div className={styles.image}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z"></path><path d="m10 14-1-1-3 4h12l-5-7z"></path></svg>
+              <FontAwesomeIcon icon={'image'} />
             </div>
         }
 
@@ -53,7 +54,7 @@ const DashboardItemStore = ({ item, isToggle, handleToggle, handleApprove, handl
               className={styles.btn}
               onClick={() => handleApprove(item.id)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
+              <FontAwesomeIcon icon='check-circle' fixedWidth />
               <span>{ t('approve.label') }</span>
             </div> : null
         }
@@ -64,7 +65,7 @@ const DashboardItemStore = ({ item, isToggle, handleToggle, handleApprove, handl
               className={styles.btn}
               onClick={() => handleSpecialApprove(item.id)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+              <FontAwesomeIcon icon='exclamation-triangle' fixedWidth />
               <span>Special Approve</span>
             </div> : null
         }
@@ -73,7 +74,7 @@ const DashboardItemStore = ({ item, isToggle, handleToggle, handleApprove, handl
           className={`${styles.btn} ${isToggle ? styles.active : ''}`}
           onClick={() => handleToggle()}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"></path><path d="M6 7h12v2H6zm0 4h12v2H6zm0 4h6v2H6z"></path></svg>
+          <FontAwesomeIcon icon='eye' fixedWidth />
           <span>Details</span>
         </div>
 

@@ -15,6 +15,15 @@
       width: 100%;
       margin: 0 0 10px 0;
     }
+
+
+    &:hover {
+      h3 {
+        //text-decoration: underline;
+      }
+    }
+
+
     .image {
       display: flex;
       justify-content: center;
@@ -121,22 +130,6 @@
 
         &:last-child {
           margin: 0;
-        }
-      }
-      
-      svg{
-        fill: #656565;
-        width: 14px;
-        height: auto;
-
-        &.active {
-          fill: #ffffff;
-          transition: .3s all ease-in-out;
-        }
-        
-        :hover {
-          fill: #ffffff;
-          transition: .3s all ease-in-out;
         }
       }
 

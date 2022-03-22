@@ -19,14 +19,6 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      svg {
-        width: 1rem;
-        height: auto;
-        fill: #0624d2;
-        &:hover {
-          fill: #77798C;
-        }
-      }
 
       @media (max-width: 769px) {
         font-size: 15px;

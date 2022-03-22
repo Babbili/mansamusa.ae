@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './CartItem.module.scss'
 
@@ -45,11 +46,11 @@ const CartItem = ({ item, lang, dataLabel, handleRemove, handleIncrease, handleD
       <td data-label={'Quantity'}>
         <div className={styles.quantity}>
           <div className={styles.btn} onClick={() => handleDecrease(item)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 11h14v2H5z"></path></svg>
+            <FontAwesomeIcon icon={'minus'} />
           </div>
           { item.quantity }
           <div className={styles.btn} onClick={() => handleIncrease(item)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+            <FontAwesomeIcon icon={'plus'} />
           </div>
         </div>
       </td>
@@ -66,7 +67,7 @@ const CartItem = ({ item, lang, dataLabel, handleRemove, handleIncrease, handleD
 
       <td data-label={'Remove'}>
         <div className={styles.remove} onClick={() => handleRemove(item)}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path></svg>
+          <FontAwesomeIcon icon='trash' fixedWidth />
         </div>
       </td>
 

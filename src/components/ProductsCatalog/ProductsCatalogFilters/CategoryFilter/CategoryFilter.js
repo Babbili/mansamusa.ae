@@ -9,6 +9,9 @@ import { useLocation } from "react-router-dom";
 
 const CategoryFilter = ({ category, handleFilters }) => {
 
+  const context = useContext(AppContext)
+  let { lang } = context
+
   let { pathname } = useLocation()
 
   const [categories, setCategories] = useState([])
@@ -22,8 +25,19 @@ const CategoryFilter = ({ category, handleFilters }) => {
       let localIndex = index === categories.length - 1 ? categories.length - 1 : index
       let localFilterProps = filterProps
 
+      let kFilter='title.en';
+      if (lang=='en')
+        kFilter='title.en';
+      else if (lang=='ar')
+        kFilter='title.ar';
+      else if (lang=='tr')
+        kFilter='title.tr';
+      else if (lang=='ru')
+        kFilter='title.ru';
+
       firestore.collection(`${localPath}/subCategories`)
-      .where('title.en', '==', currentCategory)
+      .where(kFilter, '==', currentCategory)
+
       .get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
 
@@ -34,7 +48,7 @@ const CategoryFilter = ({ category, handleFilters }) => {
           if (index === categories.length - 1) {
 
             doc.ref.collection('subCategories')
-            .orderBy('title.en', 'asc').get()
+            .orderBy(kFilter, 'asc').get()
             .then(querySnapshot => {
               querySnapshot.forEach(doc => {
                 setCategories(prevState => {
@@ -69,8 +83,18 @@ const CategoryFilter = ({ category, handleFilters }) => {
 
     let currentCategory = pathname.split('/').splice(3)
 
+    let kFilter='title.en';
+    if (lang=='en')
+      kFilter='title.en';
+    else if (lang=='ar')
+      kFilter='title.ar';
+    else if (lang=='tr')
+      kFilter='title.tr';
+    else if (lang=='ru')
+      kFilter='title.ru';
+    
     let docRef = firestore.collection('productTypes')
-    .where('title.en', '==', titleCase(category))
+    .where(kFilter, '==', titleCase(category))
 
     docRef.get()
     .then(querySnapshot => {

@@ -10,12 +10,18 @@ const ProductItemImage = ({ url, lang, product }) => {
 
   return(
 
-    <div className={styles.ProductItemImage} >
+
+    <div className={styles.ProductItemImage} 
+    style={{ 
+      backgroundImage: `url(${product.productImages.length > 0 ? product.productImages[0].url : noImage})` 
+    }}>
       <a  onClick={()=> window.location=`${url}`} >
-        <img
+        {/*<img
           src={product.productImages.length > 0 ? product.productImages[0].url : noImage}
           alt={ product.productName[lang] }
-        />
+        />*/}
+        &nbsp;
+
       </a>
     </div>
 

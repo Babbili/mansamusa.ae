@@ -6,9 +6,12 @@ import CheckoutLogIn from '../../CheckoutLogIn/CheckoutLogIn'
 
 import styles from './CartSidebar.module.scss'
 import { scrollToTop } from '../../../utils/utils'
+import { useTranslation } from 'react-i18next'
 
 
 const CartSidebar = props => {
+  const { t } = useTranslation()
+
 
   const context = useContext(AppContext)
   const { currentUser, cart } = context
@@ -100,17 +103,15 @@ const CartSidebar = props => {
       </div>
 
       <div style={{ fontSize: '.8rem' }} className='col-12 mb-4'>
-        * discount could be applied to each or some items.
-        All discounts provided by products suppliers. If you
-        need help, contact the supplier
-        <p style={{ fontSize: '.8rem', padding: '1.2rem 0rem'  }}>* Custom & duty may apply</p>
+        {t('cartCouponDesc.label')}
+        <p style={{ fontSize: '.8rem', padding: '1.2rem 0rem'  }}>{t('feesNote.label')}</p>
       </div>
       
 
       <div className='col-12'>
         <div className={styles.row}>
           <div className={styles.left}>
-            Total Items
+            {t('totalItems.label')}
           </div>
           <div className={styles.right}>
           { Intl.NumberFormat('en-AE', { style: 'currency', currency: 'AED' }).format(state.total) }
@@ -139,7 +140,7 @@ const CartSidebar = props => {
 
           <div className={styles.total}>
             <div className={styles.left}>
-              Total
+              {t('total.label')}
             </div>
             <div className={styles.right}>
             { Intl.NumberFormat('en-AE', { style: 'currency', currency: 'AED' }).format(state.total) }
@@ -147,7 +148,7 @@ const CartSidebar = props => {
           </div>
 
           <SignUpButton
-            title={'Checkout'}
+            title={t('checkout.label')}
             type={'custom'}
             onClick={() => checkout()}
             disabled={false}

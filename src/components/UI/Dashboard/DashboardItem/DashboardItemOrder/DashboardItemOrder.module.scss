@@ -116,16 +116,6 @@
       cursor: pointer;
       transition: .3s all ease-in-out;
 
-      svg {
-        fill: #656565;
-        height: 1rem;
-        width: auto;
-        &.active, &:hover {
-          fill: #ffffff;
-          background-color: #f3c964;
-        }
-      }
-
       @media (max-width: 576px) {
         width: 100%;
         margin: 0 0 10px 0;

@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './DashboardItemAdminSubscription.module.scss'
 
@@ -37,7 +38,7 @@ const DashboardItemAdminSubscription = ({ item, isToggle, handleToggle, isUnsubs
               className={styles.btn}
               onClick={() => handleCancelSubscription(item.subscriptionNumber)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
+              <FontAwesomeIcon icon='times-circle' fixedWidth />
               <span>
                 {
                   isUnsubscribe ?
@@ -51,7 +52,7 @@ const DashboardItemAdminSubscription = ({ item, isToggle, handleToggle, isUnsubs
           className={`${styles.btn} ${isToggle ? styles.active : ''}`}
           onClick={() => handleToggle()}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"></path><path d="M6 7h12v2H6zm0 4h12v2H6zm0 4h6v2H6z"></path></svg>
+          <FontAwesomeIcon icon='eye' fixedWidth />
           <span>Details</span>
         </div>
 

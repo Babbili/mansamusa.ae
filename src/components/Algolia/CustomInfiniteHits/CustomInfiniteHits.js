@@ -38,7 +38,7 @@ class CustomInfiniteHits extends Component {
   render() {
 
     const { hits } = this.props
-    
+
     return (
 
       <div className={styles.products__container}>

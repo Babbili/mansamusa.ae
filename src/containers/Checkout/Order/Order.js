@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import OrderSidebar from '../OrderSidebar/OrderSidebar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SignUpButton from '../../../components/UI/SignUpButton/SignUpButton'
 
 import styles from './Order.module.scss'
@@ -27,7 +28,7 @@ const Order = props => {
             <div className={styles.wrapper}>
 
               <div className={styles.icon}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                <FontAwesomeIcon icon={'check'} fixedWidth />
               </div>
 
               <div className={styles.title}>

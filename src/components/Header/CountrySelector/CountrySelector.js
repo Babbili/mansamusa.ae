@@ -12,6 +12,7 @@ const CountrySelector = () => {
   const [currentCountry, setCurrentCountry] = useState({
     title: {
       en: 'UAE',
+      tr: 'Turkish',
       ar: 'الإمارات العربية المتحدة',
       ru: 'UAE'
     },

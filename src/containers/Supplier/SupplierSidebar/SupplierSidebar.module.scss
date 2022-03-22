@@ -32,10 +32,8 @@
             color: rgba(0, 0, 0, 0.6);
 
             svg {
-              fill: rgba(0, 0, 0, 0.6);
+              color: rgba(0, 0, 0, 0.6);
               transition: all 0.3s ease 0s;
-              height: 1rem;
-              width: auto;
             }
           }
 
@@ -46,7 +44,7 @@
             transition: all 0.3s ease 0s;
 
             svg {
-              fill: rgba(0, 0, 0, 0.6);
+              color: rgba(0, 0, 0, 0.6);
 
               &:nth-child(2) {
                 margin-right: 0;
@@ -56,9 +54,7 @@
           }
 
           svg {
-            height: 1rem;
-            width: auto;
-            fill: rgba(0, 0, 0, .6);
+            color: rgba(0, 0, 0, .6);
           }
         }
       }
@@ -104,7 +100,6 @@
 
         &.toggled {
           svg {
-
             &:nth-child(2) {
               transform: rotate(90deg);
               margin-right: 0;
@@ -120,9 +115,7 @@
           transition: all 0.3s ease 0s;
 
           svg {
-            height: 1rem;
-            width: auto;
-            fill: #fff;
+            color: #fff;
 
             &:nth-child(2) {
               margin-right: 0;
@@ -137,15 +130,14 @@
           color: #77798C;
 
           svg {
-            fill: #8a6204;
+            color: #8a6204;
             transition: all 0.3s ease 0s;
           }
         }
 
         svg {
-          fill: #a7bdcd;
-          height: 1rem;
-          width: auto;
+          color: #a7bdcd;
+          //margin-right: 20px;
           transition: all 0.3s ease 0s;
           margin-bottom: 4px;
 

@@ -130,7 +130,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
                 <Input
                   type={'text'}
                   name={'email'}
-                  label={'Email *'}
+                  label={t('email.label')}
                   value={state.email}
                   handleChange={handleChange}
                   error={
@@ -155,7 +155,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
                   name={'isSubscribe'}
                   onClick={handleCheckbox}
                   isChecked={state.isSubscribe}
-                  text={'Want early access to sale? Get on our list'}
+                  text={t('ourlist.label')}
                 />
               </div> : null
           }
@@ -167,7 +167,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
               name={'country'}
               options={countries}
               value={state.country}
-              title={'Choose country *'}
+              title={t('country.label')}
               handleChange={handleChangeSelect}
               error={isError && state.country.length === 0 && link === '#country'}
               text={isError && state.country.length === 0 && link === '#country' ? t('thisIsaMandatoryField.label') : undefined}
@@ -179,7 +179,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
             <Input
               type={'text'}
               name={'address'}
-              label={'Address *'}
+              label={t('enterAddress.label')}
               value={state.address}
               handleChange={handleChange}
               error={isError && state.address.length === 0 && link === '#address'}
@@ -194,7 +194,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
               name={'city'}
               options={cities}
               value={state.city}
-              title={'Choose city *'}
+              title={t('city.label')}
               handleChange={handleChangeSelect}
               error={isError && state.city.length === 0 && link === '#city'}
               text={isError && state.city.length === 0 && link === '#city' ? t('thisIsaMandatoryField.label') : undefined}
@@ -206,7 +206,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
             <Input
               type={'text'}
               name={'state'}
-              label={'State'}
+              label={t('state.label')}
               value={state.state}
               handleChange={handleChange}
             />
@@ -217,7 +217,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
             <Input
               type={'text'}
               name={'zipcode'}
-              label={'Zipcode'}
+              label={t('zipcode.label')}
               value={state.zipcode}
               handleChange={handleChange}
             />
@@ -228,7 +228,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
             <Input
               type={'text'}
               name={'phone'}
-              label={'Phone *'}
+              label={t('phone.label')}
               value={state.phone}
               handleChange={handleChange}
               error={isError && state.phone.length === 0 && link === '#phone'}
@@ -243,7 +243,7 @@ const AddressForm = ({ type, lang, link, state, isError, handleSave, handleChang
                 <CheckBox
                   onClick={handleCheckbox}
                   name={'isBillingAddress'}
-                  text={'Use as billing address'}
+                  text={t('badd.label')}
                   isChecked={state.isBillingAddress}
                 />
               </div> : null

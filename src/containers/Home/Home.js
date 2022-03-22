@@ -192,7 +192,7 @@ const Home = props => {
 
       <div className={styles.home__icons}>
 
-        <a className={styles.home__icon__container} href="/categories/fashion">
+        <a className={styles.home__icon__container} href={"categories"+toSlug(t('Fashion.lable'))+"/"}>
           <div className={styles.home__icon}>
             <svg
    xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,7 @@ const Home = props => {
           <h4>{t('Fashion.lable')}</h4>
         </a>
 
-        <a className={styles.home__icon__container} href="/categories/beauty">
+        <a className={styles.home__icon__container} href={"categories"+toSlug(t('Beauty.lable'))+"/"}>
           <div className={styles.home__icon}>
             <svg
    xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +262,7 @@ const Home = props => {
           <h4>{t('Beauty.lable')}</h4>
         </a>
 
-        <a className={styles.home__icon__container} href="/categories/home-n-art">
+        <a className={styles.home__icon__container} href={"categories"+toSlug(t('HomeNart.lable'))+"/"}>
           <div className={styles.home__icon}>
             <svg
    xmlns="http://www.w3.org/2000/svg"

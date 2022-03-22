@@ -77,8 +77,7 @@
         svg {
           animation: spin 1s ease-in-out infinite;
           -webkit-animation: spin 1s ease-in-out infinite;
-          height: 1rem;
-          width: auto;
+
 
           @keyframes spin {
             to {

@@ -50,7 +50,8 @@ const Image = ({ uid, file, name }) => {
             //     className={styles.remove}
             //     onClick={() => handleRemoveFile(uid, file)}
             //   >
-            //     
+            //     <FontAwesomeIcon icon="times" fixedWidth />
+
             //   </div> : null
           }
         </div> :

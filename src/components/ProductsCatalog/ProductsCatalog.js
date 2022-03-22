@@ -14,12 +14,15 @@ import CustomToggleRefinement from '../Algolia/CustomToggleRefinement/CustomTogg
 import CustomRefinementList from '../Algolia/CustomRefinementList/CustomRefinementList'
 import CustomSortBy from '../Algolia/CustomSortBy/CustomSortBy'
 import SignUpButton from '../UI/SignUpButton/SignUpButton'
+import { useTranslation } from 'react-i18next'
+
 
 import styles from './ProductsCatalog.module.scss'
 
 
 const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
 
+  const { t } = useTranslation()
   const context = useContext(AppContext)
   const { lang, isMobile } = context
   
@@ -102,6 +105,8 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
 
   const [searchState, setSearchState] = useState({})
   const [isToggle, setIsToggle] = useState(false)
+  const [subCategories, setSubCategories] = useState([])
+
 
   const setStateId = React.useRef()
 
@@ -126,8 +131,21 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
 
       const getCategory = async category => {
 
+console.log('X X Cat',category);
+        let kFilter='title.en';
+        if (lang=='en')
+          kFilter='title.en';
+        else if (lang=='ar')
+          kFilter='title.ar';
+        else if (lang=='tr')
+          kFilter='title.tr';
+        else if (lang=='ru')
+          kFilter='title.ru';
+
         return await firestore.collection('productTypes')
-        .where('title.en', '==', category)
+        
+        .where(kFilter, '==', category)
+
         .get()
         .then(snap => {
           let cat = {}
@@ -143,8 +161,19 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
 
       const getSubCategory = async category => {
 
+        let kFilter='title.en';
+        if (lang=='en')
+          kFilter='title.en';
+        else if (lang=='ar')
+          kFilter='title.ar';
+        else if (lang=='tr')
+          kFilter='title.tr';
+        else if (lang=='ru')
+          kFilter='title.ru';
+        
         return await firestore.collectionGroup('subCategories')
-        .where('title.en', '==', category)
+        .where(kFilter, '==', category)
+
         .get()
         .then(snap => {
           let cat = {}
@@ -190,22 +219,24 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
       let language = [lang]
       let cats = {}
 
+
       language.map(l => {
 
         let allCats = categories.map(m => m[l])
+
 
         let c = {}
 
         allCats.map((m, i) => {
           let temp = [...allCats]
           console.log('temp', temp)
+
           c = {
             [`hierarchicalCategories.${ l }.lvl0`]: temp.splice(0, i + 1).join(' > ')
           }
           return c
         })
         
-
         cats = c
 
         return null
@@ -236,7 +267,6 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
       }
     }
   
-    console.log('catergories', categories)
     return await urlToSearchState(location, searchState)
 
   }, [lang])
@@ -340,7 +370,7 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
                     }
 
                     <CustomRefinementList
-                      title={'Brands'}
+                      title={ t('brands.label') }
                       attribute="storeName"
                       operator="and"
                       translations={{
@@ -361,7 +391,7 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
                     
                     <div className='col-12'>
                       
-                      <h6>Category</h6>
+                      <h6>{ t('categories.label') }</h6>
                       <CustomHierarchicalMenu
                         attributes={[
                           `hierarchicalCategories.${lang}.lvl0`,
@@ -370,8 +400,10 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
                           `hierarchicalCategories.${lang}.lvl3`,
                           `hierarchicalCategories.${lang}.lvl4`,
                         ]}
+
                         createURL={createURL}
                       />
+
                     </div>
                     
                     <div className='col-12'>
@@ -379,7 +411,7 @@ const ProductsCatalog = ({ category, categories, rootCategory, rootPath }) => {
                     </div>
 
                     <div className='col-12'>
-                      <h6>Discounts</h6>
+                      <h6>{ t('discounts.label') }</h6>
                       <CustomToggleRefinement
                         attribute="isDiscount"
                         label="Products with discounts"

@@ -74,12 +74,6 @@
   @media (max-width: 769px) {
     margin: 0;
   }
-   svg {
-     fill: var(--text-color);
-   }
-   svg:hover {
-     fill: #fff;
-   }
 
   &:hover {
     background-color: #f3c965;
@@ -102,12 +96,7 @@
   @media (max-width: 769px) {
     margin: 0 10px;
   }
-  svg {
-    fill: var(--text-color);
-  }
-  svg:hover {
-    fill: #fff;
-  }
+
   &:hover {
     background-color: #f3c965;
     color: #ffffff;

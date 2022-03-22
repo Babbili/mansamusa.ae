@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './DashboardItemSupplierAbandoned.module.scss'
 
 
@@ -25,11 +26,20 @@ const DashboardItemSupplierAbandoned = ({ item, isToggle, handleToggle }) => {
 
       <div className={styles.btnWrapper}>
 
+
+        {/*<div*/}
+        {/*  className={styles.btn}*/}
+        {/*  onClick={() => handleAccept(item.id)}*/}
+        {/*>*/}
+        {/*  <FontAwesomeIcon icon='bell' fixedWidth />*/}
+        {/*  <span>Send Notification</span>*/}
+        {/*</div>*/}
+
         <div
           className={`${styles.btn} ${isToggle ? styles.active : ''}`}
           onClick={() => handleToggle()}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"></path><path d="M6 7h12v2H6zm0 4h12v2H6zm0 4h6v2H6z"></path></svg>
+          <FontAwesomeIcon icon='eye' fixedWidth />
           <span>Details</span>
         </div>
 
