@@ -36,7 +36,7 @@ const SupplierProductsEdit = ({ currentStore, ...props }) => {
     store: '',
     storeName: '',
     createdAt: '',
-    editedAt: moment().unix(),
+    editedAt: Math.round(new Date() * 0.001),
     productName: '',
     productNameAr: '',
     productNameRu: '',

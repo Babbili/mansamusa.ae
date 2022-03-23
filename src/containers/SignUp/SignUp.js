@@ -258,7 +258,7 @@ const SignUp = props => {
               displayName: `${state.firstName} ${state.lastName}`,
               completed: false,
               type: 'supplier',
-              createdAt: moment().unix()
+              createdAt: Math.round(new Date() * 0.001)
             }).then(() => {
               props.history.push('/create-store')
             })
@@ -305,7 +305,7 @@ const SignUp = props => {
                     email: state.email,
                     displayName: `${state.firstName} ${state.lastName}`,
                     type: 'customer',
-                    createdAt: moment().unix()
+                    createdAt: Math.round(new Date() * 0.001)
                   })
                   .then(() => {
 
@@ -420,7 +420,7 @@ const SignUp = props => {
               photoURL: res.user.photoURL,
               completed: false,
               type: 'supplier',
-              createdAt: moment().unix()
+              createdAt: Math.round(new Date() * 0.001)
             }).then(() => {
               props.history.push('/create-store')
             })

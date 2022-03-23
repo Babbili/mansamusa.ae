@@ -68,7 +68,7 @@ class App extends Component {
             uid,
             items: cart,
             stores,
-            createdAt: moment().unix()
+            createdAt: Math.round(new Date() * 0.001)
           }, {
             merge: true
           })
@@ -88,7 +88,7 @@ class App extends Component {
             uid,
             items: wishlist,
             stores,
-            createdAt: moment().unix()
+            createdAt: Math.round(new Date() * 0.001)
           }, {
             merge: true
           })

@@ -71,7 +71,7 @@ export const saveOrder = async (cart, address) => {
 
   return await firestore.collection('orders')
     .add({
-      createdAt: moment().unix(),
+      createdAt: Math.round(new Date() * 0.001),
       items: cart,
       user: {
         firstName: address.firstName,

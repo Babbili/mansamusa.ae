@@ -980,7 +980,7 @@ exports.addMultipleProductsTask = functions.https.onCall((data, context) => {
           isDiscount: json.discount > 0,
           discount: json.discount,
           discountPrice: json.discount > 0 ? discountPrice : '',
-          createdAt: moment().unix(),
+          createdAt: Math.round(new Date() * 0.001),
           productImages: [],
           productType: [
             {
@@ -1163,7 +1163,11 @@ exports.updateTrialDays = functions.pubsub.schedule('0 1 * * *')
   .onSnapshot(snapshot => {
     snapshot.forEach(doc => {
 
-
+      // let a = Date.now()
+      // let b = new Date('2022, 3, 17')
+      // let diff = a - b
+      // console.log(diff)
+      // console.log(diff/3600000)
 
       let a = moment()
       let b = moment.unix(doc.data().createdAt)
@@ -2972,7 +2976,7 @@ app.post('/checkout/payment/response',  (request, response) => {
 
   admin.firestore().collection('transactions')
   .add({
-    createdAd: moment().unix(),
+    createdAd: Math.round(new Date() * 0.001),
     orderId: obj.order_id,
     trackingId: obj.tracking_id,
     bankRefNumber: obj.bank_ref_no,
@@ -3487,6 +3491,18 @@ exports.siStart = functions.pubsub.schedule('0 1 * * *')
   let startDate = moment(now).subtract(1, 'day').startOf('day').unix()
   let endDate = moment(now).subtract(1, 'day').endOf('day').unix()
 
+  // let now = new Date(Date.now())
+  // let nowHours = now.getHours()
+  // console.log(nowHours)
+  // let start = now - ( nowHours * 3600000 )
+
+  // let startDate = new Date(start)
+  // console.log(startDate.toString())
+
+  // let end = Date.now() + ( (24 - nowHours) * 3600000 )
+  // let endDate = new Date(end)
+  
+  // console.log(endDate.toString())
 
   const getSub = async subscriptionId => {
 

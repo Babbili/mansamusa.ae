@@ -540,7 +540,7 @@ const AdminViewProducts = props => {
     .add({
       productId: state.comment.id,
       comment: text,
-      date: moment().unix(),
+      date: Math.round(new Date() * 0.001),
     })
     .then(() => {
       setState({

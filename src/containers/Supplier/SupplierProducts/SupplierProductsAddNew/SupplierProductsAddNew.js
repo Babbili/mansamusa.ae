@@ -33,7 +33,7 @@ const SupplierProductsAddNew = ({ currentStore, ...props }) => {
   const [state, setState] = useState({
     store: '',
     storeName: '',
-    createdAt: moment().unix(),
+    createdAt: Math.round(new Date() * 0.001),
     productName: '',
     productNameAr: '',
     productNameRu: '',
